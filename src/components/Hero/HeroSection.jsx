@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import styles from './HeroSection.module.css';
+import { motion } from "framer-motion";
+import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
   return (
@@ -78,7 +78,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          PRANA
+          Ayurmana
           <span>AYURVEDIC CLINIC</span>
         </motion.h1>
 
@@ -88,7 +88,9 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Experience the authentic wisdom of Kerala Ayurveda. We offer classical treatments, Panchakarma therapies, and doctor consultations across 5 locations in Metro City.
+          Experience the authentic wisdom of Kerala Ayurveda. We offer classical
+          treatments, Panchakarma therapies, and doctor consultations across 5
+          locations in Metro City.
         </motion.p>
 
         <motion.div

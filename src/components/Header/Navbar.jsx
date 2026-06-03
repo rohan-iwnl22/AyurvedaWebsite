@@ -130,7 +130,7 @@ export default function Navbar() {
                 fontWeight="bold"
                 letterSpacing="0.05em"
               >
-                PRANA
+                Ayurmana
               </text>
               <text
                 x="55"
