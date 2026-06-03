@@ -1,0 +1,38 @@
+/* variables.css */
+:root {
+  /* Color Palette (Ayurveda inspired - premium forest, warm sand/gold accents) */
+  --color-primary: #2d5a3c;        /* Deep Forest/Emerald Green */
+  --color-primary-light: #468453;  /* Lighter Forest Green */
+  --color-primary-dark: #1b3a24;   /* Very Deep Green */
+  --color-accent: #c5a55a;         /* Soft Gold */
+  --color-accent-hover: #b08d43;   /* Muted Darker Gold */
+  --color-bg-light: #faf8f5;       /* Warm Soft Cream */
+  --color-bg-dark: #1b3a24;        /* Dark Green for sections/hero */
+  --color-bg-white: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-text-dark: #232d29;      /* Charcoal with a hint of green */
+  --color-text-muted: #5e6b65;     /* Slate Muted */
+  --color-text-light: #ffffff;
+  --color-border: #e6e0d5;         /* Muted warm sand border */
+  --color-border-focus: #2d5a3c;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Elevation (Shadows) */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+  --shadow-premium: 0 20px 40px rgba(45, 90, 60, 0.08);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  --topbar-height: 40px;
+}
