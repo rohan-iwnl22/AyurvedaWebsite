@@ -63,14 +63,14 @@ export default function HeroSection() {
       </svg>
 
       <div className={`${styles.heroContent} container`}>
-        <motion.span
+        {/* <motion.span
           className={styles.subtitle}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           Traditional & Classical healing
-        </motion.span>
+        </motion.span> */}
 
         <motion.h1
           className={styles.title}
@@ -79,7 +79,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Ayurmana
-          <span>AYURVEDIC CLINIC</span>
+          <span>AYURVED PANCHAKARAM AND NUTRI HEALTH CLINIC</span>
         </motion.h1>
 
         <motion.p
@@ -88,9 +88,9 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Experience the authentic wisdom of Kerala Ayurveda. We offer classical
-          treatments, Panchakarma therapies, and doctor consultations across 5
-          locations in Metro City.
+          Where Detox Meets Nourishment." At Ayurmana, our classical Panchakarma
+          protocols and therapeutic nutrition plans are designed to restore your
+          Doshas, strengthen your Agni, and renew your complete well-being.
         </motion.p>
 
         <motion.div

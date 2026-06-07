@@ -1,14 +1,15 @@
-import { FaCheckCircle } from 'react-icons/fa';
-import AnimateOnScroll from '../AnimateOnScroll';
-import styles from './WelcomeSection.module.css';
+import { FaCheckCircle } from "react-icons/fa";
+import AnimateOnScroll from "../AnimateOnScroll";
+import styles from "./WelcomeSection.module.css";
 
 export default function WelcomeSection() {
   const highlights = [
-    'Experienced Doctors & Trained Therapists from Kerala',
-    'Authentic Ayurvedic Herbs & Classical Oils',
-    'State-of-the-Art Private Therapy Chambers',
-    'Customized Wellness & Diet Consultation',
-    'NABH Accredited Healthcare Standards',
+    "Nadi Pariksha, Classical Dosha-Based Diagnosis & Constitution Analysis",
+    "Structured Panchakarma & Rejuvenation Programs",
+    "Authentic Herbal Medicines Prepared from Organic Sources",
+    "Evidence-Informed Classical Ayurvedic Treatment Protocols",
+    "Private, Sanitised & Serene Therapy Chambers",
+    "Integrated Dietary & Ritucharya (Seasonal) Guidance",
   ];
 
   return (
@@ -17,17 +18,34 @@ export default function WelcomeSection() {
         {/* Left Text Column */}
         <AnimateOnScroll direction="right" delay={0.1}>
           <div className={styles.textColumn}>
-            <span className={styles.accentHeading}>Welcome to Prana</span>
+            <span className={styles.accentHeading}>Welcome to AYURMANA</span>
             <h2 className={styles.title}>
-              Authentic <span className={styles.highlight}>Ayurvedic Healing</span> Experience in Metro City
+              Where the Vedic Science of Life is Practised with Integrity
             </h2>
             <p className={styles.description}>
-              Prana Ayurvedic Group has been a trusted pioneer in traditional healing, bringing the purest form of classical Ayurvedic treatments directly from Veda Valley to Metro City. Guided by ancient scriptures, we restore balance and vitality to your life.
+              In a world increasingly dominated by symptomatic treatment,
+              Ayurmana stands as a steadfast sanctuary of genuine, root-cause
+              healing. We are a specialised Ayurvedic medical centre where
+              ancient therapeutic wisdom meets rigorous clinical practice —
+              offering each patient a deeply personalised path to health,
+              balance, and vitality.
             </p>
             <p className={styles.description}>
-              Our treatments are personalized, combining herbal therapies, Panchakarma detox protocols, and holistic consultations to treat the root cause of chronic ailments and promote long-term well-being.
+              Whether you arrive burdened by chronic illness, debilitating
+              stress, or the quiet imbalances that diminish quality of life,
+              Ayurmana is equipped to guide your restoration with precision,
+              compassion, and authentic Ayurvedic science.
             </p>
-            
+            <p className={styles.description}>
+              We do not reimagine Ayurveda. We preserve it.
+            </p>
+            <p className={styles.description}>
+              Every consultation at Ayurmana begins with Nadi Pariksha (pulse
+              diagnosis), Prakriti analysis, and a thorough understanding of the
+              patient's Dosha constitution — because we believe accurate
+              diagnosis is the foundation of effective healing.
+            </p>
+
             <ul className={styles.bulletList}>
               {highlights.map((text, idx) => (
                 <li key={idx} className={styles.bulletItem}>
@@ -47,7 +65,10 @@ export default function WelcomeSection() {
         <AnimateOnScroll direction="left" delay={0.2}>
           <div className={styles.imageColumn}>
             <div className={styles.imageFrame}>
-              <img src="/images/vertical1.jpg" alt="Traditional Ayurvedic Treatment" />
+              <img
+                src="/images/vertical1.jpg"
+                alt="Traditional Ayurvedic Treatment"
+              />
               <div className={styles.goldOffsetCard}></div>
             </div>
 

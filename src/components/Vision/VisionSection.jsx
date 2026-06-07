@@ -1,5 +1,5 @@
-import AnimateOnScroll from '../AnimateOnScroll';
-import styles from './VisionSection.module.css';
+import AnimateOnScroll from "../AnimateOnScroll";
+import styles from "./VisionSection.module.css";
 
 export default function VisionSection() {
   return (
@@ -9,7 +9,10 @@ export default function VisionSection() {
         <AnimateOnScroll direction="right" delay={0.2}>
           <div className={styles.imageColumn}>
             <div className={styles.imageFrame}>
-              <img src="/images/vision.jpg" alt="Natural Ayurvedic Herbs Preparation" />
+              <img
+                src="/images/vision.jpg"
+                alt="Natural Ayurvedic Herbs Preparation"
+              />
               <div className={styles.goldOffsetCard}></div>
             </div>
 
@@ -34,21 +37,33 @@ export default function VisionSection() {
           <div className={styles.textColumn}>
             <span className={styles.accentHeading}>Our Philosophy</span>
             <h2 className={styles.title}>
-              Rooted in tradition, <span className={styles.highlight}>committed</span> to cure
+              True healing means treating the person, not merely the disease —
+              that is the
+              <span className={styles.highlight}> Ayurmana promise. </span>
+              {/* Rooted in tradition,{" "}
+              <span className={styles.highlight}>committed</span> to cure */}
             </h2>
-            
+
             <p className={styles.description}>
-              Our vision is to propagate the authentic teachings of Ayurveda as a comprehensive lifestyle science rather than just a symptomatic therapy. By combining time-tested diagnostic procedures with pure, standardized herbal medicines, we make healing both deep and sustainable.
+              The ancient sages who composed the Charaka Samhita, Sushruta
+              Samhita, and Ashtanga Hridayam did not merely document medicine —
+              they documented the art of living in alignment with nature. At
+              Ayurmana, every clinical decision is guided by these foundational
+              texts.
             </p>
-            
+
             <div className={styles.quoteBlock}>
-              "Ayurveda is not just about treating the body; it is a pathway to harmonious living, aligning the soul, mind, and elements."
+              "Hita ahara vihara sevana" — A life of wholesome food, purposeful
+              routine, and disciplined conduct is the highest form of medicine.
             </div>
 
             <p className={styles.description}>
-              At Prana, every treatment is supervised by certified Ayurvedic physicians. Our herbal formulations are prepared under strict hygienic conditions from organic herbs sourced directly from Veda Valley, Kerala — the birthplace of classical Ayurveda.
+              We bring deep scholarly knowledge of Ayurvedic classics combined
+              with clinical experience in managing complex, chronic, and
+              lifestyle-related conditions. We do not prescribe generic
+              protocols. We craft healing journeys unique to each individual.
             </p>
-            
+
             <a href="#booking" className="btn btn-outline">
               Consult Our Doctors
             </a>

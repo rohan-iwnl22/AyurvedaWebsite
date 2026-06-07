@@ -1,18 +1,21 @@
-import { FaFacebookF, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import styles from './Navbar.module.css';
+import { FaFacebookF, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import styles from "./Navbar.module.css";
 
 export default function TopBar() {
   return (
     <div className={styles.topBar}>
       <div className={`${styles.topBarContainer} container`}>
         <div className={styles.topBarLeft}>
-          <a href="tel:+919876543210" className={styles.topBarLink}>
+          <a href="#" className={styles.topBarLink}>
             <FaPhoneAlt size={12} />
-            <span>+91 98765 43210</span>
+            <span>+91 93707 71021</span>
+            <span>+91 89762 97579</span>
           </a>
-          <a href="mailto:info@ayurvedademo.com" className={styles.topBarLink}>
+          <a href="#" className={styles.topBarLink}>
             <FaEnvelope size={12} />
-            <span>info@ayurvedademo.com</span>
+            <span>poojapatil0792@gmail.com</span>
+            <span>dr.kiraningle@gmail.com </span>
+            <span>ayurmanayurved@gmail.com</span>
           </a>
         </div>
         <div className={styles.topBarRight}>

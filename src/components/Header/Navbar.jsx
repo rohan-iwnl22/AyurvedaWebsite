@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
-import styles from './Navbar.module.css';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -11,59 +11,115 @@ export default function Navbar() {
   const [mobileExpanded, setMobileExpanded] = useState({});
   const location = useLocation();
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileOpen]);
+
+  // Handle sticky navbar on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 40);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on page change
+  // Close mobile menu and reset expanded state when location changes
   useEffect(() => {
-    setIsMobileOpen(false);
-    setMobileExpanded({});
+    if (isMobileOpen) {
+      setIsMobileOpen(false);
+      setMobileExpanded({});
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   const menuItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About Us', path: '/about-us' },
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about-us" },
     {
-      label: 'Wellness',
-      path: '#',
+      label: "Wellness",
+      path: "#",
       children: [
-        { label: 'Kati Vasti', path: '/treatment/kati-vasti' },
-        { label: 'Anti Ageing', path: '/treatment/anti-ageing' },
-        { label: 'Shirodhara', path: '/treatment/shirodhara' },
-        { label: 'Panchakarma', path: '/treatment/panchakarma' },
+        { label: "Snehana", path: "/treatment/snehana" },
+        { label: "Swedana", path: "/treatment/swedana" },
+        { label: "Vamana", path: "/treatment/vamana" },
+        { label: "Virechana", path: "/treatment/virechana" },
+        { label: "Basti", path: "/treatment/basti" },
+        { label: "Nasya", path: "/treatment/nasya" },
+        { label: "Raktamokshana", path: "/treatment/raktamokshana" },
+        { label: "Shirodhara", path: "/treatment/shirodhara" },
+        { label: "Udvartana", path: "/treatment/udvartana" },
+        { label: "Patra Pottali", path: "/treatment/patraPottali" },
+        { label: "Kansya Thali", path: "/treatment/kansyaThali" },
+        { label: "Kati Vasti", path: "/treatment/katiVasti" },
+        { label: "Netra Tarpana", path: "/treatment/netraTarpana" },
+        { label: "Agnikarma", path: "/treatment/agnikarma" },
+        { label: "Viddhakarma", path: "/treatment/viddhakarma" },
       ],
     },
     {
-      label: 'Treatments',
-      path: '#',
+      label: "Treatments",
+      path: "#",
       children: [
-        { label: 'Arthritis Care', path: '/treatment/arthritis' },
-        { label: 'Back Pain Therapy', path: '/treatment/back-pain' },
-        { label: 'Spondylosis Treatment', path: '/treatment/spondylosis' },
-        { label: 'Skin Disease Relief', path: '/treatment/skin-diseases' },
+        { label: "Arthritis", path: "/treatment/arthritis" },
+        { label: "Vericose Veins", path: "/treatment/ericoseVeins" },
+        { label: "Insomnia", path: "/treatment/insomnia" },
+        { label: "Stress & Strain", path: "/treatment/stressStrain" },
+        { label: "Back Pain", path: "/treatment/backPain" },
+        {
+          label: "Cervical Spondilitis",
+          path: "/treatment/cervicalSpondilitis",
+        },
+        { label: "Infertility", path: "/treatment/infertility" },
+        { label: "Heart Disease", path: "/treatment/heartDisease" },
+        { label: "Paralysis", path: "/treatment/paralysis" },
+        { label: "PCOS / PMOS", path: "/treatment/pcos" },
+        { label: "Psoriasis", path: "/treatment/psoriasis" },
+        { label: "Migraine", path: "/treatment/migraine" },
+        {
+          label: "Specialised Treatments",
+          path: "/treatment/specialisedTreatments",
+        },
+        { label: "Diet Counselling ", path: "/treatment/dietCounselling " },
       ],
     },
     {
-      label: 'Contact',
-      path: '/contact',
+      label: "Contact",
+      path: "/contact",
       children: [
-        { label: 'North Side Branch', path: '/contact?branch=north-side' },
-        { label: 'West End Branch', path: '/contact?branch=west-end' },
-        { label: 'East Gate Branch', path: '/contact?branch=east-gate' },
-        { label: 'South Hub Branch', path: '/contact?branch=south-hub' },
-        { label: 'Central Point Branch', path: '/contact?branch=central-point' },
+        { label: "North Side Branch", path: "/contact?branch=north-side" },
+        { label: "West End Branch", path: "/contact?branch=west-end" },
+        { label: "East Gate Branch", path: "/contact?branch=east-gate" },
+        { label: "South Hub Branch", path: "/contact?branch=south-hub" },
+        {
+          label: "Central Point Branch",
+          path: "/contact?branch=central-point",
+        },
       ],
     },
   ];
+
+  // Split wellness children into two halves
+  const wellnessChildren =
+    menuItems.find((item) => item.label === "Wellness")?.children || [];
+  const wellnessMidPoint = Math.ceil(wellnessChildren.length / 2);
+  const wellnessFirstHalf = wellnessChildren.slice(0, wellnessMidPoint);
+  const wellnessSecondHalf = wellnessChildren.slice(wellnessMidPoint);
+
+  // Split treatments children into two halves
+  const treatmentsChildren =
+    menuItems.find((item) => item.label === "Treatments")?.children || [];
+  const treatmentsMidPoint = Math.ceil(treatmentsChildren.length / 2);
+  const treatmentsFirstHalf = treatmentsChildren.slice(0, treatmentsMidPoint);
+  const treatmentsSecondHalf = treatmentsChildren.slice(treatmentsMidPoint);
 
   const toggleMobileExpanded = (label) => {
     setMobileExpanded((prev) => ({
@@ -72,9 +128,12 @@ export default function Navbar() {
     }));
   };
 
+  // Debug: Log when mobile menu opens/closes
+  console.log("Mobile menu open:", isMobileOpen);
+
   return (
     <div className={styles.navWrapper}>
-      <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ''}`}>
+      <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
         <div className={`${styles.navbarContainer} container`}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
@@ -83,9 +142,8 @@ export default function Navbar() {
               viewBox="0 0 240 60"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              aria-label="Prana Logo"
+              aria-label="Ayurmana Logo"
             >
-              {/* Elegant Leaf/Tree Emblem */}
               <path
                 d="M30 42C30 42 20 38 20 28C20 18 30 12 30 12C30 12 40 18 40 28C40 38 30 42 30 42Z"
                 fill="var(--color-primary)"
@@ -120,7 +178,6 @@ export default function Navbar() {
                 strokeWidth="1.5"
                 strokeLinecap="round"
               />
-              {/* Brand Typography */}
               <text
                 x="55"
                 y="30"
@@ -152,7 +209,9 @@ export default function Navbar() {
               <li
                 key={item.label}
                 className={styles.navItem}
-                onMouseEnter={() => item.children && setActiveDropdown(item.label)}
+                onMouseEnter={() =>
+                  item.children && setActiveDropdown(item.label)
+                }
                 onMouseLeave={() => item.children && setActiveDropdown(null)}
               >
                 {item.children ? (
@@ -167,24 +226,110 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.label && (
-                  <ul className={styles.dropdown}>
-                    {item.children.map((child) => (
-                      <li key={child.label} className={styles.dropdownItem}>
-                        <Link to={child.path} className={styles.dropdownLink}>
-                          {child.label}
-                        </Link>
-                      </li>
-                    ))}
+                  <ul
+                    className={styles.dropdown}
+                    style={
+                      item.label === "Wellness" || item.label === "Treatments"
+                        ? {
+                            minWidth: "500px",
+                            display: "grid",
+                            gridTemplateColumns: "1fr 1fr",
+                            gap: "0.5rem",
+                            padding: "1rem",
+                          }
+                        : {}
+                    }
+                  >
+                    {item.label === "Wellness" ? (
+                      <>
+                        <div>
+                          {wellnessFirstHalf.map((child) => (
+                            <li
+                              key={child.label}
+                              className={styles.dropdownItem}
+                            >
+                              <Link
+                                to={child.path}
+                                className={styles.dropdownLink}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                        <div>
+                          {wellnessSecondHalf.map((child) => (
+                            <li
+                              key={child.label}
+                              className={styles.dropdownItem}
+                            >
+                              <Link
+                                to={child.path}
+                                className={styles.dropdownLink}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                      </>
+                    ) : item.label === "Treatments" ? (
+                      <>
+                        <div>
+                          {treatmentsFirstHalf.map((child) => (
+                            <li
+                              key={child.label}
+                              className={styles.dropdownItem}
+                            >
+                              <Link
+                                to={child.path}
+                                className={styles.dropdownLink}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                        <div>
+                          {treatmentsSecondHalf.map((child) => (
+                            <li
+                              key={child.label}
+                              className={styles.dropdownItem}
+                            >
+                              <Link
+                                to={child.path}
+                                className={styles.dropdownLink}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      item.children.map((child) => (
+                        <li key={child.label} className={styles.dropdownItem}>
+                          <Link to={child.path} className={styles.dropdownLink}>
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))
+                    )}
                   </ul>
                 )}
               </li>
             ))}
           </ul>
 
-          {/* Hamburger (Mobile) */}
+          {/* Hamburger (Mobile) - Added explicit onClick handler */}
           <button
             className={styles.burger}
-            onClick={() => setIsMobileOpen(true)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              console.log("Hamburger clicked");
+              setIsMobileOpen(true);
+            }}
             aria-label="Open menu"
           >
             <FaBars size={24} />
@@ -193,15 +338,21 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Drawer */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMobileOpen && (
-          <div className={styles.mobileDrawer} onClick={() => setIsMobileOpen(false)}>
+          <div
+            className={styles.mobileDrawer}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsMobileOpen(false);
+            }}
+          >
             <motion.div
               className={styles.mobileDrawerContent}
-              initial={{ x: '100%' }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className={styles.mobileDrawerHeader}>
@@ -223,12 +374,15 @@ export default function Navbar() {
                     fontSize="24"
                     fontWeight="bold"
                   >
-                    PRANA
+                    Ayurmana
                   </text>
                 </svg>
                 <button
                   className={styles.closeBtn}
-                  onClick={() => setIsMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileOpen(false);
+                  }}
                   aria-label="Close menu"
                 >
                   <FaTimes size={24} />
@@ -241,7 +395,9 @@ export default function Navbar() {
                     <div className={styles.mobileNavLinkRow}>
                       {item.children ? (
                         <>
-                          <span className={styles.mobileNavLink}>{item.label}</span>
+                          <span className={styles.mobileNavLink}>
+                            {item.label}
+                          </span>
                           <button
                             className={styles.mobileExpandBtn}
                             onClick={() => toggleMobileExpanded(item.label)}
@@ -255,7 +411,11 @@ export default function Navbar() {
                           </button>
                         </>
                       ) : (
-                        <Link to={item.path} className={styles.mobileNavLink}>
+                        <Link
+                          to={item.path}
+                          className={styles.mobileNavLink}
+                          onClick={() => setIsMobileOpen(false)}
+                        >
                           {item.label}
                         </Link>
                       )}
@@ -266,7 +426,11 @@ export default function Navbar() {
                       <ul className={styles.mobileDropdown}>
                         {item.children.map((child) => (
                           <li key={child.label}>
-                            <Link to={child.path} className={styles.mobileDropdownLink}>
+                            <Link
+                              to={child.path}
+                              className={styles.mobileDropdownLink}
+                              onClick={() => setIsMobileOpen(false)}
+                            >
                               {child.label}
                             </Link>
                           </li>
