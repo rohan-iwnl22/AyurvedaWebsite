@@ -65,7 +65,7 @@ export default function Navbar() {
         { label: "Kati Vasti", path: "/treatment/katiVasti" },
         { label: "Netra Tarpana", path: "/treatment/netraTarpana" },
         { label: "Agnikarma", path: "/treatment/agnikarma" },
-        { label: "Viddhakarma", path: "/treatment/viddhakarma" },
+        { label: "Viddhakarma", path: "/treatment/  " },
       ],
     },
     {

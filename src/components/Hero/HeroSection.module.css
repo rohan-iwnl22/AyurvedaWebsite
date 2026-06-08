@@ -65,27 +65,28 @@
   justify-content: center;
 }
 
-/* Botanical Illustrations (Absolute Positioned) */
-.leafLeft {
+/* Enhanced Botanical Illustrations */
+.leafLeft,
+.leafRight {
   position: absolute;
-  left: -50px;
-  top: 10%;
-  width: 250px;
-  opacity: 0.15;
+  width: 300px;
+  height: auto;
   pointer-events: none;
   z-index: 2;
-  transform: rotate(45deg);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.12))
+    drop-shadow(0 0 12px rgba(210, 153, 75, 0.25));
+  will-change: transform;
+  transform-origin: center;
+}
+
+.leafLeft {
+  left: -50px;
+  top: 10%;
 }
 
 .leafRight {
-  position: absolute;
   right: -50px;
   bottom: 15%;
-  width: 250px;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 2;
-  transform: rotate(-45deg);
 }
 
 /* Bottom Curve Divider */
@@ -110,7 +111,7 @@
   fill: var(--color-bg-light);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets */
 @media (max-width: 980px) {
   .title {
     font-size: 3.5rem;
@@ -120,7 +121,7 @@
   }
   .leafLeft,
   .leafRight {
-    width: 180px;
+    width: 220px;
   }
 }
 
@@ -149,6 +150,6 @@
   }
   .leafLeft,
   .leafRight {
-    display: none; /* Hide botanical decorations on mobile to save screen estate */
+    display: none; /* Hide botanical decorations on mobile */
   }
 }

@@ -3,6 +3,7 @@ import TopBar from './components/Header/TopBar';
 import Navbar from './components/Header/Navbar';
 import FooterSection from './components/Footer/FooterSection';
 import WhatsAppWidget from './components/WhatsApp/WhatsAppWidget';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
@@ -12,6 +13,7 @@ import './styles/global.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         {/* Top Header Section */}
         <TopBar />

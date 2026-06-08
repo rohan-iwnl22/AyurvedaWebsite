@@ -6,7 +6,7 @@ const TREATMENT_DB = {
   snehana: {
     title: "Snehana",
     subtitle: "Oleation Therapy DEEP TISSUE NOURISHMENT & DETOX PREPARATION",
-    image: "/images/vertical1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/snehana.jpg",
     intro:
       "Snehana is a foundational classical Ayurvedic therapy involving the systematic application of medicated oils and ghee — either internally or externally. It deeply nourishes the body tissues, softens accumulated toxins, and prepares the body channels for complete Panchakarma elimination.",
     // description: "",
@@ -30,7 +30,7 @@ const TREATMENT_DB = {
   swedana: {
     title: "Swedana",
     subtitle: "Medicated Steam Therapy CHANNEL OPENING & TOXIN ELIMINATION",
-    image: "/images/vision.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/swedana.jpg",
     intro:
       "Swedana is a classical heat-based therapy wherein the body is exposed to medicated herbal steam to induce therapeutic perspiration. It dilates the body's internal channels, facilitates the movement of loosened toxins toward the digestive tract, and relieves deep muscular and joint stiffness.",
     // description: "",
@@ -54,7 +54,7 @@ const TREATMENT_DB = {
   vamana: {
     title: "Vamana",
     subtitle: "Therapeutic Emesis KAPHA ELIMINATION & RESPIRATORY RESTORATION",
-    image: "/images/shirodhara.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vamana.jpg",
     intro:
       "Vamana is one of the five principal Panchakarma procedures, involving the controlled and medically supervised elimination of excess Kapha Dosha through therapeutic emesis. It is the most powerful classical treatment for conditions rooted in Kapha aggravation and is administered exclusively under qualified physician supervision.",
     // description: "",
@@ -80,7 +80,7 @@ const TREATMENT_DB = {
     title: "Virechana",
     subtitle:
       "Therapeutic Purgation PITTA PURIFICATION & METABOLIC DETOXIFICATION",
-    image: "/images/vision.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/virechana.jpg",
     intro:
       "Virechana is a core Panchakarma procedure designed to eliminate aggravated Pitta Dosha from the body through medicated purgation. It comprehensively purifies the liver, gallbladder, and gastrointestinal tract — offering lasting relief in conditions rooted in excess heat, inflammation, and toxin accumulation.",
     // description: "",
@@ -209,7 +209,7 @@ const TREATMENT_DB = {
   udvartana: {
     title: "Udvartana",
     subtitle: "Herbal Powder Massage METABOLIC STIMULATION & SKIN REJUVENATION",
-    image: "/images/vision.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/udvartana.jpg",
     intro:
       "Udvartana is a distinctive and invigorating Ayurvedic therapy involving a vigorous full-body massage using specially formulated herbal powders or pastes. It stimulates lymphatic drainage, breaks down subcutaneous fat deposits, deeply exfoliates the skin, and effectively manages Kapha-dominant disorders.",
     // description: "",
@@ -234,7 +234,8 @@ const TREATMENT_DB = {
   patraPottali: {
     title: "Patra Pottali",
     subtitle: "Leaf Bolus Therapy ANTI-INFLAMMATORY HEAT & HERBAL HEALING",
-    image: "/images/shirodhara.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/pattra%20potli.jpg",
     intro:
       "Patra Pottali is a specialised heat therapy in which fresh medicinal leaves combined with therapeutic herbs and oils are bundled into boluses and applied rhythmically to the body after heating. It delivers deep anti-inflammatory and analgesic benefits directly to affected joints, muscles, and tissues.",
     // description: "",
@@ -260,7 +261,8 @@ const TREATMENT_DB = {
     title: "Kansya Thali",
     subtitle:
       "Bronze Plate Foot Therapy MARMA ACTIVATION & DEEP NERVOUS RESTORATION",
-    image: "/images/nasayam1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kansya%20thali.jpg",
     intro:
       "Kansya Thali is a deeply relaxing and therapeutically significant treatment involving the massage of the feet using a Kansya (bronze) bowl with medicated ghee. In classical Ayurveda, the feet contain vital Marma points directly connected to the organs, nervous system, and overall physiological balance of the entire body.",
     // description: "",
@@ -286,7 +288,8 @@ const TREATMENT_DB = {
     title: "Kati Vasti",
     subtitle:
       "Lower Back Treatment TARGETED SPINE REJUVENATION & LUMBAR RESTORATION",
-    image: "/images/abhyangam.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kati%20vastli.jpg",
     intro:
       "Kati Vasti is a highly effective classical treatment where warm medicated herbal oil is retained on the lower back within a localised reservoir made of black gram dough. This therapy lubricates the spine, relieves pressure on nerve roots, and deeply nourishes the muscle fibres and skeletal structure of the lumbar region.",
     // description: "",
@@ -310,7 +313,8 @@ const TREATMENT_DB = {
     title: "Netra Tarpana",
     subtitle:
       "Eye Nourishment Therapy OCULAR REJUVENATION & VISION RESTORATION",
-    image: "/images/vertical1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/netra%20tapana.jpg",
     intro:
       "Netra Tarpana is a highly specialised classical Ayurvedic procedure wherein warm, freshly prepared medicated ghee is retained over the eyes within a carefully constructed reservoir of black gram dough. This deeply nourishing therapy directly feeds and rejuvenates the ocular tissues, strengthens the optic nerve, and restores the natural vitality of the eyes.",
     // description: "",
@@ -337,7 +341,8 @@ const TREATMENT_DB = {
     title: "Agnikarma",
     subtitle:
       "Thermal Cauterisation Therapy TARGETED PAIN ELIMINATION & NERVE RESTORATION",
-    image: "/images/potali-1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/agni%20karma.jpg",
     intro:
       "Agnikarma is a unique and highly precise classical Ayurvedic para-surgical procedure involving the therapeutic application of controlled heat to specific points on the body using specialised instruments. It directly eliminates Vata and Kapha-based pain at its source — offering relief in conditions that do not respond to conventional therapies.",
     // description: "",
@@ -361,7 +366,8 @@ const TREATMENT_DB = {
       "3 to 5 sessions depending on the condition and physician prescription.",
   },
   viddhakarma: {
-    title: "Viddhakarma",
+    title:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhi%20karmaa.jpg",
     subtitle:
       "Therapeutic Needling Therapy MARMA POINT STIMULATION & DOSHA REBALANCING",
     image: "/images/vision.jpg",
