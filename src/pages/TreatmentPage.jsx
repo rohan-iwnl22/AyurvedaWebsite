@@ -392,7 +392,8 @@ const TREATMENT_DB2 = {
   arthritis: {
     title: "Arthritis Care",
     subtitle: "Therapy JOINT LUBRICATION & PAIN RELIEF",
-    image: "/images/vertical1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/ayurvedic%20therapy.jpg",
     intro:
       "Our specialised Arthritis Care Therapy at Ayurmana combines classical external procedures including Janu Vasti, Patra Pinda Sweda, and targeted herbal anti-inflammatory oil applications. This comprehensive protocol addresses swelling, restores joint mobility, and arrests the progressive degeneration of cartilage in joints affected by Osteoarthritis or Rheumatoid Arthritis.",
     // description: "",
@@ -416,7 +417,8 @@ const TREATMENT_DB2 = {
   ericoseVeins: {
     title: "Varicose Veins",
     subtitle: "Therapy VENOUS RESTORATION & CIRCULATORY HEALING",
-    image: "/images/vision.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/veins%20therapy.jpg",
     intro:
       "Ayurmana's classical approach to Varicose Veins combines Raktamokshana (blood purification), Lepa (herbal paste applications), and internal Ayurvedic formulations to address the root cause of venous insufficiency. Our therapy strengthens vein walls, improves blood return to the heart, and relieves the pain and heaviness associated with this condition.",
     // description: "",
@@ -440,7 +442,8 @@ const TREATMENT_DB2 = {
   insomnia: {
     title: "Insomnia Care",
     subtitle: "Therapy NERVOUS RESTORATION & DEEP SLEEP REVIVAL",
-    image: "/images/shirodhara.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/insomnia%20therapy.jpg",
     intro:
       "At Ayurmana, Insomnia is treated as a manifestation of aggravated Vata and Pitta Doshas affecting the nervous system. Our protocol combines Shirodhara, Abhyanga, Nasya, and internally prescribed herbal nervine formulations to calm the mind, regulate the sleep cycle, and restore deep, natural sleep patterns without dependency.",
     // description: "",
@@ -464,7 +467,8 @@ const TREATMENT_DB2 = {
   stressStrain: {
     title: "Stress & Strain Management",
     subtitle: "Therapy MIND-BODY RESTORATION & NERVOUS BALANCE",
-    image: "/images/vertical1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/stresss%20nd%20mngment.jpg",
     intro:
       "Chronic stress and physical strain are among the most prevalent health concerns of modern life — and among the most effectively addressed by classical Ayurveda. Ayurmana's Stress & Strain protocol combines Shirodhara, Abhyanga, Padabhyanga, and physician-prescribed adaptogenic herbal formulations to restore complete mental and physical equilibrium.",
     // description: "",
@@ -489,7 +493,8 @@ const TREATMENT_DB2 = {
   backPain: {
     title: "Back Pain",
     subtitle: "Therapy SPINAL RESTORATION & LUMBAR PAIN RELIEF",
-    image: "/images/potali-1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/aurvedic%20neck.jpg",
     intro:
       "Back pain — whether acute or chronic — is primarily a Vata disorder in classical Ayurveda. Ayurmana's Back Pain Therapy combines Kati Vasti, Abhyanga, Swedana, and Basti to address the root cause of lumbar discomfort, decompress affected nerve roots, and restore structural integrity to the spine and surrounding musculature.",
     // description: "",
@@ -514,7 +519,8 @@ const TREATMENT_DB2 = {
   cervicalSpondilitis: {
     title: "Cervical Spondylitis",
     subtitle: "Therapy CERVICAL RESTORATION & NECK PAIN RELIEF",
-    image: "/images/nasayam1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/d1e8cc29-9b28-4e7a-8688-0b7b21563362.jpg",
     intro:
       "Ayurmana's Cervical Spondylitis protocol employs Greeva Vasti, Nasya, Abhyanga, and Swedana to address degeneration and inflammation in the cervical vertebrae. This classical combination relieves nerve compression, reduces inflammation, and restores natural mobility and strength to the neck and shoulder region.",
     // description: "",
@@ -538,7 +544,7 @@ const TREATMENT_DB2 = {
   infertility: {
     title: "Infertility Care",
     subtitle: "Therapy REPRODUCTIVE RESTORATION & HORMONAL BALANCE",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/infertile.jpg",
     intro:
       "Ayurmana offers a deeply personalised and classically grounded Infertility Care protocol for both male and female patients. Combining Uttara Basti, Virechana, Abhyanga, and physician-prescribed Rasayana formulations, our therapy addresses the root hormonal, structural, and nutritional imbalances that contribute to reproductive disorders.",
     // description: "",
@@ -563,7 +569,8 @@ const TREATMENT_DB2 = {
   heartDisease: {
     title: "Heart Disease & Cardiac Wellness",
     subtitle: "Therapy CARDIOVASCULAR RESTORATION & HEART HEALTH",
-    image: "/images/vision.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/heart%20and%20disease.jpg",
     intro:
       "Ayurmana's cardiac wellness protocol is rooted in classical Hridaya Chikitsa — the Ayurvedic science of heart care. Combining Snehana, Virechana, Hridaya Basti, and physician-prescribed Medhya and Hridya herbal formulations, our therapy supports cardiovascular function, manages cholesterol, and strengthens the heart muscle naturally.",
     // description: "",
@@ -588,7 +595,7 @@ const TREATMENT_DB2 = {
   paralysis: {
     title: "Paralysis Rehabilitation",
     subtitle: "Therapy NEURO-MUSCULAR RESTORATION & FUNCTIONAL RECOVERY",
-    image: "/images/shirodhara.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/paralysis.jpg",
     intro:
       "Paralysis, classified as Pakshaghata in classical Ayurveda, is a severe Vata disorder affecting the motor and sensory pathways of the nervous system. Ayurmana's Paralysis Rehabilitation protocol combines intensive Basti, Abhyanga, Swedana, Nasya, and Shashtika Shali Pinda Sweda to restore nerve function, rebuild muscular strength, and support progressive functional recovery.",
     // description: "",
@@ -613,7 +620,7 @@ const TREATMENT_DB2 = {
   pcos: {
     title: "PCOS / PCOD Management",
     subtitle: "Therapy HORMONAL REBALANCING & OVARIAN HEALTH RESTORATION",
-    image: "/images/vertical1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/pcos%20pmod.jpg",
     intro:
       "PCOS and PCOD are increasingly prevalent conditions rooted in aggravated Kapha and Vata Doshas combined with impaired Agni (metabolic fire). Ayurmana's PCOS management protocol combines Virechana, Udvartana, Basti, and precisely prescribed herbal formulations to regulate hormonal cycles, manage cyst formation, and restore ovarian health naturally.",
     // description: "",
@@ -639,7 +646,7 @@ const TREATMENT_DB2 = {
   psoriasis: {
     title: "Psoriasis Care",
     subtitle: "Therapy SKIN PURIFICATION & CHRONIC SKIN DISORDER MANAGEMENT",
-    image: "/images/nasayam1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/psoraises.jpg",
     intro:
       "Psoriasis, known as Ekakushtha in classical Ayurveda, is a chronic skin condition rooted in aggravated Vata and Kapha Doshas combined with deep-seated Ama toxins in the Rakta (blood) tissue. Ayurmana's Psoriasis Care protocol combines Virechana, Raktamokshana, medicated Takradhara, and precise internal herbal formulations to purify the blood, calm the immune response, and restore healthy skin function.",
     // description: "",
@@ -664,7 +671,7 @@ const TREATMENT_DB2 = {
   migraine: {
     title: "Migraine Management",
     subtitle: "Therapy CRANIAL DETOXIFICATION & PAIN ELIMINATION",
-    image: "/images/potali-1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/migrane.jpg",
     intro:
       "Migraine is classified in classical Ayurveda as Ardhavabhedaka — a condition rooted in aggravated Vata and Pitta Doshas affecting the cranial and sensory channels. Ayurmana's Migraine Management protocol combines Shirodhara, Nasya, Shirobasti, and physician-prescribed herbal nervine formulations to eliminate the root cause of recurrent migraine and restore complete cranial balance.",
     // description: "",
@@ -713,7 +720,7 @@ const TREATMENT_DB2 = {
   dietCounselling: {
     title: "Diet Counselling & Nutritional Wellness",
     subtitle: "AYURVEDIC NUTRITION & LIFESTYLE GUIDANCE",
-    image: "/images/vision.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/diet.jpg",
     intro:
       "At Ayurmana, we recognise that no treatment is complete without addressing the foundation of all health — what you eat and how you live. Our Ayurvedic Diet Counselling service is conducted by qualified physicians who assess your Prakriti, current Vikriti, digestive strength (Agni), and lifestyle to design a personalised dietary and nutritional plan rooted in classical Ayurvedic principles.",
     // description: "",

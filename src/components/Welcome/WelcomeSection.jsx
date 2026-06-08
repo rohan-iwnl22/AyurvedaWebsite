@@ -55,9 +55,9 @@ export default function WelcomeSection() {
               ))}
             </ul>
 
-            <a href="#booking" className="btn btn-primary">
+            {/* <a href="#booking" className="btn btn-primary">
               Book A Consultation
-            </a>
+            </a> */}
           </div>
         </AnimateOnScroll>
 

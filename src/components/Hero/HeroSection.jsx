@@ -79,7 +79,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Ayurmana
-          <span>AYURVED PANCHAKARAM AND NUTRI HEALTH CLINIC</span>
+          <span>AYURVED PANCHAKARAM AND NUTRIHEALTH CLINIC</span>
         </motion.h1>
 
         <motion.p
@@ -88,9 +88,10 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Where Detox Meets Nourishment." At Ayurmana, our classical Panchakarma
-          protocols and therapeutic nutrition plans are designed to restore your
-          Doshas, strengthen your Agni, and renew your complete well-being.
+          "Where Detox Meets Nourishment". At Ayurmana, our classical
+          Panchakarma protocols and therapeutic nutrition plans are designed to
+          restore your Doshas, strengthen your Agni, and renew your complete
+          well-being.
         </motion.p>
 
         <motion.div

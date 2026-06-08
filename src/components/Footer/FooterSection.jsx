@@ -16,7 +16,7 @@ export default function FooterSection() {
     <footer className={styles.footer}>
       <div className="container">
         {/* NABH Accreditation Banner */}
-        <div className={styles.nabhBanner}>
+        {/* <div className={styles.nabhBanner}>
           <div className={styles.nabhBadge}>
             <div className={styles.nabhBadgeText}>
               NABH
@@ -32,7 +32,7 @@ export default function FooterSection() {
               therapeutic excellence.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Branch Section */}
         <div className={styles.mainBranchSection}>
@@ -63,7 +63,7 @@ export default function FooterSection() {
             <span className={styles.separator}>•</span>
             <a href="#terms">Terms & Conditions</a>
             <span className={styles.separator}>•</span>
-            <span className={styles.hqLocation}>HQ: Veda Valley, Kerala</span>
+            <span className={styles.hqLocation}>HQ: Akola, Maharashtra</span>
           </div>
         </div>
       </div>

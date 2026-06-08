@@ -240,10 +240,14 @@
 
 .branchDetails {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   line-height: 1.5;
   margin-bottom: 1rem;
   flex-grow: 1;
+}
+
+.branchDetails p {
+  color: var(--color-text-light);
 }
 
 .branchContact {

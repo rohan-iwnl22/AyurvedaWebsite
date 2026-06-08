@@ -95,13 +95,9 @@ export default function Navbar() {
       label: "Contact",
       path: "/contact",
       children: [
-        { label: "North Side Branch", path: "/contact?branch=north-side" },
-        { label: "West End Branch", path: "/contact?branch=west-end" },
-        { label: "East Gate Branch", path: "/contact?branch=east-gate" },
-        { label: "South Hub Branch", path: "/contact?branch=south-hub" },
         {
-          label: "Central Point Branch",
-          path: "/contact?branch=central-point",
+          label: "Akola Branch",
+          path: "/contact?branch=akola",
         },
       ],
     },

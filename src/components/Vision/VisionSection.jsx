@@ -64,9 +64,9 @@ export default function VisionSection() {
               protocols. We craft healing journeys unique to each individual.
             </p>
 
-            <a href="#booking" className="btn btn-outline">
+            {/* <a href="#booking" className="btn btn-outline">
               Consult Our Doctors
-            </a>
+            </a> */}
           </div>
         </AnimateOnScroll>
       </div>

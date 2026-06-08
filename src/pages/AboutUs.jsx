@@ -1,5 +1,8 @@
 import AnimateOnScroll from "../components/AnimateOnScroll";
 
+const aboutUsBannerURl =
+  "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/about%20us%20banner.jpeg";
+
 const whyChooseUs = [
   {
     title: "Authentic",
@@ -36,33 +39,88 @@ const whyChooseUs = [
 export default function AboutUs() {
   return (
     <div className="about-page">
-      {/* Mini Hero */}
+      {/* Hero Section with Banner Image */}
       <section
         style={{
-          background:
-            "linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%)",
-          color: "white",
-          padding: "100px 0 60px 0",
+          position: "relative",
+          height: "75vh",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           textAlign: "center",
+          color: "white",
         }}
       >
-        <div className="container">
+        {/* Banner Image */}
+        <img
+          src={aboutUsBannerURl}
+          alt="About Us Banner"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+
+        {/* Overlay - Now covers everything including sides */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background:
+              "linear-gradient(135deg, rgba(0, 51, 35, 0.85) 0%, rgba(0, 102, 68, 0.85) 100%)",
+          }}
+        />
+
+        {/* Content */}
+        <div
+          className="container"
+          style={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 20px",
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "white",
+              marginBottom: "0.5rem",
+              fontSize: "2.5rem",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+            }}
+          >
+            About
+          </h1>
+
           <h1
             style={{
               fontFamily: "var(--font-heading)",
               color: "white",
               marginBottom: "1rem",
+              fontSize: "2.5rem",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
-            About Ayurmana Classical Ayurveda. Personalised Care. Lasting
-            Results.
+            Ayurmana - Classical Ayurveda. Personalised Care. Lasting Results.
           </h1>
+
           <p
             style={{
-              color: "var(--color-accent)",
+              color: "#FFD700",
               textTransform: "uppercase",
               letterSpacing: "0.15em",
               fontWeight: 600,
+              textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
             }}
           >
             Our Heritage & Modern Ayurvedic Care
@@ -159,11 +217,6 @@ export default function AboutUs() {
               essential foundation upon which every personalised, effective, and
               lasting treatment plan at Ayurmana is built.
             </p>
-            <div style={{ textAlign: "center", marginTop: "3rem" }}>
-              <a href="#booking" className="btn btn-primary">
-                Book Consultation Now
-              </a>
-            </div>
           </AnimateOnScroll>
 
           {/* Enhanced Why Choose Us Section */}
@@ -250,7 +303,6 @@ export default function AboutUs() {
                       style={{
                         fontSize: "3rem",
                         marginBottom: "1rem",
-                        display: "inline-block",
                         background:
                           "linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%)",
                         width: "70px",

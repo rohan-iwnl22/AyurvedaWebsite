@@ -3,39 +3,11 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 
 const BRANCH_DETAILS = {
-  baner: {
-    name: 'Baner Branch',
-    address: 'Office No. 101, Supreme Square, DP Road, Near Ranwara Hotel, Baner, Pune - 411045',
-    phone: '+91 94049 92255',
-    email: 'baner@muppra.com',
-    timing: '8:00 AM - 8:00 PM (Sunday Closed)',
-  },
-  kothrud: {
-    name: 'Kothrud Branch',
-    address: 'Flat No. 1, Ground Floor, Dahanukar Colony, Lane No. 2, Kothrud, Pune - 411038',
-    phone: '+91 94049 92255',
-    email: 'kothrud@muppra.com',
-    timing: '8:00 AM - 8:00 PM (Sunday Closed)',
-  },
-  'viman-nagar': {
-    name: 'Viman Nagar Branch',
-    address: 'Row House No. 2, Clover Corner, Near Symbiosis School, Viman Nagar, Pune - 411014',
-    phone: '+91 94049 92255',
-    email: 'vimannagar@muppra.com',
-    timing: '8:00 AM - 8:00 PM (Sunday Closed)',
-  },
-  magarpatta: {
-    name: 'Magarpatta Branch',
-    address: 'Shop No. 12, Destination Center, Magarpatta City, Hadapsar, Pune - 411028',
-    phone: '+91 94049 92255',
-    email: 'magarpatta@muppra.com',
-    timing: '8:00 AM - 8:00 PM (Sunday Closed)',
-  },
-  nigdi: {
-    name: 'Nigdi Pradhikaran Branch',
-    address: 'Plot No. 84, Sector 24, Near Akurdi Station, Nigdi Pradhikaran, Pune - 411044',
-    phone: '+91 94049 92255',
-    email: 'nigdi@muppra.com',
+  akola: {
+    name: 'Ayurmana Ayurvedic Clinic',
+    address: 'Shop No:2, Mangal murti Residency, MHADA colony road, behind durga Lawns, kaulkhed, Akola',
+    phone: '+91 93707 71021 || +91 89762 97579',
+    email: 'ayurmanayurved@gmail.com',
     timing: '8:00 AM - 8:00 PM (Sunday Closed)',
   },
 };
@@ -121,11 +93,7 @@ export default function Contact() {
                     <label htmlFor="c_branch" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Preferred Branch</label>
                     <select id="c_branch" defaultValue={branchParam || ""}>
                       <option value="">General Inquiry</option>
-                      <option value="baner">Baner Branch</option>
-                      <option value="kothrud">Kothrud Branch</option>
-                      <option value="viman-nagar">Viman Nagar Branch</option>
-                      <option value="magarpatta">Magarpatta Branch</option>
-                      <option value="nigdi">Nigdi Branch</option>
+                      <option value="akola">Ayurmana Ayurvedic Clinic</option>
                     </select>
                   </div>
 
