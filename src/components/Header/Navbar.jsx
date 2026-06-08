@@ -4,6 +4,9 @@ import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 
+const AyurmanLogo =
+  "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/logo.png";
+
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -70,13 +73,13 @@ export default function Navbar() {
       path: "#",
       children: [
         { label: "Arthritis", path: "/treatment/arthritis" },
-        { label: "Vericose Veins", path: "/treatment/ericoseVeins" },
+        { label: "Varicose Veins", path: "/treatment/varicoseVeins" },
         { label: "Insomnia", path: "/treatment/insomnia" },
         { label: "Stress & Strain", path: "/treatment/stressStrain" },
         { label: "Back Pain", path: "/treatment/backPain" },
         {
-          label: "Cervical Spondilitis",
-          path: "/treatment/cervicalSpondilitis",
+          label: "Cervical Spondylitis",
+          path: "/treatment/cervicalSpondylitis",
         },
         { label: "Infertility", path: "/treatment/infertility" },
         { label: "Heart Disease", path: "/treatment/heartDisease" },
@@ -88,7 +91,7 @@ export default function Navbar() {
           label: "Specialised Treatments",
           path: "/treatment/specialisedTreatments",
         },
-        { label: "Diet Counselling ", path: "/treatment/dietCounselling " },
+        { label: "Diet Counselling", path: "/treatment/dietCounselling" },
       ],
     },
     {
@@ -124,79 +127,42 @@ export default function Navbar() {
     }));
   };
 
-  // Debug: Log when mobile menu opens/closes
-  console.log("Mobile menu open:", isMobileOpen);
-
   return (
     <div className={styles.navWrapper}>
       <nav className={`${styles.navbar} ${isSticky ? styles.sticky : ""}`}>
         <div className={`${styles.navbarContainer} container`}>
           {/* Logo */}
           <Link to="/" className={styles.logo}>
-            <svg
+            <img
+              src={AyurmanLogo}
+              alt="Ayurmana Ayurvedic Clinic"
               className={styles.logoImage}
-              viewBox="0 0 240 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-label="Ayurmana Logo"
-            >
-              <path
-                d="M30 42C30 42 20 38 20 28C20 18 30 12 30 12C30 12 40 18 40 28C40 38 30 42 30 42Z"
-                fill="var(--color-primary)"
-              />
-              <path
-                d="M30 12V42"
-                stroke="var(--color-bg-light)"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M30 22C33 20 37 20 38 24"
-                stroke="var(--color-bg-light)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M30 28C33 26 37 26 38 30"
-                stroke="var(--color-bg-light)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M30 24C27 22 23 22 22 26"
-                stroke="var(--color-bg-light)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M30 30C27 28 23 28 22 32"
-                stroke="var(--color-bg-light)"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <text
-                x="55"
-                y="30"
-                fill="var(--color-primary-dark)"
-                fontFamily="var(--font-heading)"
-                fontSize="20"
-                fontWeight="bold"
-                letterSpacing="0.05em"
+              style={{ height: "45px", width: "auto", marginRight: "10px" }}
+            />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontWeight: "bold",
+                  fontSize: "1.2rem",
+                  color: "var(--color-primary-dark)",
+                  lineHeight: "1.2",
+                }}
               >
                 Ayurmana
-              </text>
-              <text
-                x="55"
-                y="45"
-                fill="var(--color-accent)"
-                fontFamily="var(--font-body)"
-                fontSize="9"
-                fontWeight="600"
-                letterSpacing="0.25em"
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.15em",
+                  color: "var(--color-accent)",
+                  fontWeight: 600,
+                }}
               >
                 AYURVEDIC CLINIC
-              </text>
-            </svg>
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -317,13 +283,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Hamburger (Mobile) - Added explicit onClick handler */}
+          {/* Hamburger (Mobile) */}
           <button
             className={styles.burger}
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              console.log("Hamburger clicked");
               setIsMobileOpen(true);
             }}
             aria-label="Open menu"
@@ -352,27 +317,36 @@ export default function Navbar() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className={styles.mobileDrawerHeader}>
-                <svg
+                <img
+                  src={AyurmanLogo}
+                  alt="Ayurmana Ayurvedic Clinic"
                   className={styles.mobileLogoImage}
-                  viewBox="0 0 240 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30 42C30 42 20 38 20 28C20 18 30 12 30 12C30 12 40 18 40 28C40 38 30 42 30 42Z"
-                    fill="var(--color-primary)"
-                  />
-                  <text
-                    x="55"
-                    y="35"
-                    fill="var(--color-primary-dark)"
-                    fontFamily="var(--font-heading)"
-                    fontSize="24"
-                    fontWeight="bold"
+                  style={{ height: "35px", width: "auto", marginRight: "8px" }}
+                />
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      fontWeight: "bold",
+                      fontSize: "1rem",
+                      color: "var(--color-primary-dark)",
+                      lineHeight: "1.2",
+                    }}
                   >
                     Ayurmana
-                  </text>
-                </svg>
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.6rem",
+                      letterSpacing: "0.15em",
+                      color: "var(--color-accent)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    AYURVEDIC CLINIC
+                  </span>
+                </div>
                 <button
                   className={styles.closeBtn}
                   onClick={(e) => {
