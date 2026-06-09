@@ -3,7 +3,9 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaInstagram,
+  FaFacebook,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 export default function TopBar() {
@@ -26,7 +28,7 @@ export default function TopBar() {
         </div>
         <div className={styles.topBarRight}>
           <a
-            href="https://facebook.com/ayurvedademo"
+            href="https://www.instagram.com/ayurmana_clinic"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.topBarLink}
@@ -34,9 +36,18 @@ export default function TopBar() {
           >
             <FaInstagram size={12} />
           </a>
-          <a href="#shop" className={styles.topBarBtn}>
-            Shop Now
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.topBarLink}
+            aria-label="Facebook"
+          >
+            <FaFacebook size={12} />
           </a>
+          <Link to="/products" className={styles.topBarBtn}>
+            Our Products
+          </Link>
           {/* <a href="#employee-login" className={styles.topBarLink}>
             Employee Login
           </a> */}

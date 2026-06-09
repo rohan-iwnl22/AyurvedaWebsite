@@ -453,7 +453,7 @@ export default function HeroSection() {
       </div>
 
       {/* Curved Divider at the bottom */}
-      <div className={styles.divider}>
+      {/* <div className={styles.divider}>
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -465,7 +465,7 @@ export default function HeroSection() {
             className="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 }

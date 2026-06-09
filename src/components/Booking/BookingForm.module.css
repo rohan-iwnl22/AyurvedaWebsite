@@ -31,7 +31,7 @@
 
 .accentHeading::before,
 .accentHeading::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 25px;
   height: 2px;
@@ -59,7 +59,7 @@
 }
 
 .progressBar::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 18px;
   left: 5%;
@@ -172,6 +172,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .doctorCard:hover {
@@ -186,24 +187,62 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Updated Doctor Avatar with Image */
 .doctorAvatar {
-  width: 80px;
-  height: 80px;
+  position: relative;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: var(--color-bg-light);
-  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  border: 2px solid var(--color-border);
+  overflow: hidden;
+  border: 3px solid var(--color-border);
   transition: all var(--transition-normal);
 }
 
 .doctorSelected .doctorAvatar {
   border-color: var(--color-primary);
-  background-color: var(--color-primary);
-  color: white;
+}
+
+.doctorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.doctorCard:hover .doctorImage {
+  transform: scale(1.08);
+}
+
+/* Selected overlay for checkmark */
+.selectedOverlay {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selectedOverlay svg {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Fallback icon style (if image fails to load) */
+.fallbackIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
 }
 
 .doctorName {
@@ -310,6 +349,24 @@
   color: var(--color-text-dark);
 }
 
+.formGroup input,
+.formGroup select {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+  background-color: var(--color-bg-white);
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(45, 90, 60, 0.1);
+}
+
 /* Step 4: Success confirmation */
 .successBlock {
   text-align: center;
@@ -403,7 +460,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast);
-  margin-left: auto; /* Push to the right if backBtn is absent */
+  margin-left: auto;
 }
 
 .nextBtn:hover {
@@ -423,15 +480,23 @@
     max-width: 450px;
     margin: 0 auto;
   }
+
   .scheduleLayout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .detailsForm {
     grid-template-columns: 1fr;
   }
+
   .fullWidth {
     grid-column: span 1;
+  }
+
+  .doctorAvatar {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -439,7 +504,25 @@
   .formWindow {
     padding: 1.5rem;
   }
+
   .title {
     font-size: 2rem;
+  }
+
+  .doctorAvatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .doctorName {
+    font-size: 1rem;
+  }
+
+  .doctorSpec {
+    font-size: 0.7rem;
+  }
+
+  .doctorDesc {
+    font-size: 0.75rem;
   }
 }

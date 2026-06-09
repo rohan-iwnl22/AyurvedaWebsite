@@ -1,61 +1,50 @@
-import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaUserMd, FaCheckCircle } from 'react-icons/fa';
-import styles from './BookingForm.module.css';
-import 'react-datepicker/dist/react-datepicker.css';
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaCheckCircle } from "react-icons/fa";
+import styles from "./BookingForm.module.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 const DOCTORS = [
   {
-    id: 'sharma',
-    name: 'Dr. A. Sharma',
-    spec: 'Panchakarma & Gynaecology',
-    desc: 'Expert in detoxification therapies and women\'s health with over 12 years of experience.',
-    avatar: 'A',
+    id: "sharma",
+    name: "Dr Kiran M. Ingle",
+    spec: "BAMS, MD, PHD SCHOLAR",
+    desc: "MD Ayurveda Specialist | Ex-Registrar, KEM Hospital Mumbai | 10 Years of Clinical Excellence in Integrative Ayurvedic Medicine.",
+    avatar:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/dr%20kiran%20ingle.jpg",
   },
   {
-    id: 'patel',
-    name: 'Dr. R. Patel',
-    spec: 'Spine & Joint Disorders',
-    desc: 'Specializes in Marma therapy, managing chronic arthritis, sciatica, and cervical spondylosis.',
-    avatar: 'R',
-  },
-  {
-    id: 'kumar',
-    name: 'Dr. S. Kumar',
-    spec: 'Skin & Detox Specialist',
-    desc: 'Renowned for treating chronic skin conditions and lifestyle disorders through customized diets.',
-    avatar: 'S',
+    id: "patel",
+    name: "Dr Pooja K. Ingle",
+    spec: "BAMS, MPH( NUTRITION)",
+    desc: "Nutrition & Panchakarma Specialist | 5 Years of Transforming Health Through Ayurvedic Detox & Therapeutic Diet Planning",
+    avatar:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/dr%20pooja%20ingle.jpg",
   },
 ];
 
 const TIME_SLOTS = [
-  '09:00 AM',
-  '10:00 AM',
-  '11:30 AM',
-  '02:00 PM',
-  '03:30 PM',
-  '05:00 PM',
+  "09:00 AM",
+  "10:00 AM",
+  "11:30 AM",
+  "02:00 PM",
+  "03:30 PM",
+  "05:00 PM",
 ];
 
-const BRANCHES = [
-  { id: 'north-side', name: 'North Side' },
-  { id: 'west-end', name: 'West End' },
-  { id: 'east-gate', name: 'East Gate' },
-  { id: 'south-hub', name: 'South Hub' },
-  { id: 'central-point', name: 'Central Point' },
-];
+const BRANCHES = [{ id: "Akola", name: "Akola Branch" }];
 
 export default function BookingForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    doctorId: '',
+    doctorId: "",
     date: new Date(),
-    timeSlot: '',
-    name: '',
-    email: '',
-    phone: '',
-    branch: '',
+    timeSlot: "",
+    name: "",
+    email: "",
+    phone: "",
+    branch: "",
   });
 
   const selectedDoctorObj = DOCTORS.find((doc) => doc.id === formData.doctorId);
@@ -77,24 +66,24 @@ export default function BookingForm() {
   };
 
   const isStepValid = () => {
-    if (step === 1) return formData.doctorId !== '';
-    if (step === 2) return formData.date !== null && formData.timeSlot !== '';
+    if (step === 1) return formData.doctorId !== "";
+    if (step === 2) return formData.date !== null && formData.timeSlot !== "";
     if (step === 3) {
       return (
-        formData.name.trim() !== '' &&
-        formData.email.trim() !== '' &&
-        formData.phone.trim() !== '' &&
-        formData.branch !== ''
+        formData.name.trim() !== "" &&
+        formData.email.trim() !== "" &&
+        formData.phone.trim() !== "" &&
+        formData.branch !== ""
       );
     }
     return true;
   };
 
   const getProgressPercentage = () => {
-    if (step === 1) return '0%';
-    if (step === 2) return '33%';
-    if (step === 3) return '66%';
-    return '100%';
+    if (step === 1) return "0%";
+    if (step === 2) return "33%";
+    if (step === 3) return "66%";
+    return "100%";
   };
 
   return (
@@ -104,7 +93,8 @@ export default function BookingForm() {
           <span className={styles.accentHeading}>Appointment Portal</span>
           <h2 className={styles.title}>Book Treatment</h2>
           <p className={styles.description}>
-            Schedule an online consultation or booking at any of our branches. Fast, secure, and authenticated setup.
+            Schedule an online consultation or booking at any of our branches.
+            Fast, secure, and authenticated setup.
           </p>
         </div>
 
@@ -115,32 +105,32 @@ export default function BookingForm() {
             style={{ width: getProgressPercentage() }}
           ></div>
           <div
-            className={`${styles.progressStep} ${step >= 1 ? styles.stepActive : ''} ${
-              step > 1 ? styles.stepDone : ''
+            className={`${styles.progressStep} ${step >= 1 ? styles.stepActive : ""} ${
+              step > 1 ? styles.stepDone : ""
             }`}
           >
             <div className={styles.stepNumber}>1</div>
             <div className={styles.stepLabel}>Select Doctor</div>
           </div>
           <div
-            className={`${styles.progressStep} ${step >= 2 ? styles.stepActive : ''} ${
-              step > 2 ? styles.stepDone : ''
+            className={`${styles.progressStep} ${step >= 2 ? styles.stepActive : ""} ${
+              step > 2 ? styles.stepDone : ""
             }`}
           >
             <div className={styles.stepNumber}>2</div>
             <div className={styles.stepLabel}>Schedule</div>
           </div>
           <div
-            className={`${styles.progressStep} ${step >= 3 ? styles.stepActive : ''} ${
-              step > 3 ? styles.stepDone : ''
+            className={`${styles.progressStep} ${step >= 3 ? styles.stepActive : ""} ${
+              step > 3 ? styles.stepDone : ""
             }`}
           >
             <div className={styles.stepNumber}>3</div>
             <div className={styles.stepLabel}>Patient Details</div>
           </div>
           <div
-            className={`${styles.progressStep} ${step >= 4 ? styles.stepActive : ''} ${
-              step > 4 ? styles.stepDone : ''
+            className={`${styles.progressStep} ${step >= 4 ? styles.stepActive : ""} ${
+              step > 4 ? styles.stepDone : ""
             }`}
           >
             <div className={styles.stepNumber}>4</div>
@@ -159,21 +149,37 @@ export default function BookingForm() {
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.2 }}
               >
-                <h3 className={styles.stepTitle}>Select Your Ayurvedic Doctor</h3>
+                <h3 className={styles.stepTitle}>
+                  Select Your Ayurvedic Doctor
+                </h3>
                 <div className={styles.doctorGrid}>
                   {DOCTORS.map((doc) => (
                     <div
                       key={doc.id}
                       className={`${styles.doctorCard} ${
-                        formData.doctorId === doc.id ? styles.doctorSelected : ''
+                        formData.doctorId === doc.id
+                          ? styles.doctorSelected
+                          : ""
                       }`}
-                      onClick={() => updateField('doctorId', doc.id)}
+                      onClick={() => updateField("doctorId", doc.id)}
                     >
-                      <div className={styles.doctorAvatar}>
-                        {formData.doctorId === doc.id ? (
-                          <FaCheckCircle size={32} />
-                        ) : (
-                          <FaUserMd size={32} />
+                      <div className={styles.doctorAvatarWrapper}>
+                        <div className={styles.doctorAvatar}>
+                          <img
+                            src={doc.avatar}
+                            alt={doc.name}
+                            className={styles.doctorImage}
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src =
+                                "https://via.placeholder.com/100x100?text=Doctor";
+                            }}
+                          />
+                        </div>
+                        {formData.doctorId === doc.id && (
+                          <div className={styles.selectedOverlay}>
+                            <FaCheckCircle size={28} color="#4caf50" />
+                          </div>
                         )}
                       </div>
                       <div className={styles.doctorName}>{doc.name}</div>
@@ -196,10 +202,12 @@ export default function BookingForm() {
                 <h3 className={styles.stepTitle}>Select Date & Time</h3>
                 <div className={styles.scheduleLayout}>
                   <div className={styles.calendarWrapper}>
-                    <label className={styles.datepickerLabel}>Choose Date</label>
+                    <label className={styles.datepickerLabel}>
+                      Choose Date
+                    </label>
                     <DatePicker
                       selected={formData.date}
-                      onChange={(d) => updateField('date', d)}
+                      onChange={(d) => updateField("date", d)}
                       minDate={new Date()}
                       inline
                     />
@@ -212,9 +220,11 @@ export default function BookingForm() {
                           key={slot}
                           type="button"
                           className={`${styles.slotBtn} ${
-                            formData.timeSlot === slot ? styles.slotSelected : ''
+                            formData.timeSlot === slot
+                              ? styles.slotSelected
+                              : ""
                           }`}
-                          onClick={() => updateField('timeSlot', slot)}
+                          onClick={() => updateField("timeSlot", slot)}
                         >
                           {slot}
                         </button>
@@ -242,7 +252,7 @@ export default function BookingForm() {
                       type="text"
                       placeholder="e.g. Rahul Sharma"
                       value={formData.name}
-                      onChange={(e) => updateField('name', e.target.value)}
+                      onChange={(e) => updateField("name", e.target.value)}
                     />
                   </div>
 
@@ -253,7 +263,7 @@ export default function BookingForm() {
                       type="email"
                       placeholder="e.g. rahul@example.com"
                       value={formData.email}
-                      onChange={(e) => updateField('email', e.target.value)}
+                      onChange={(e) => updateField("email", e.target.value)}
                     />
                   </div>
 
@@ -264,7 +274,7 @@ export default function BookingForm() {
                       type="tel"
                       placeholder="e.g. 9876543210"
                       value={formData.phone}
-                      onChange={(e) => updateField('phone', e.target.value)}
+                      onChange={(e) => updateField("phone", e.target.value)}
                     />
                   </div>
 
@@ -273,7 +283,7 @@ export default function BookingForm() {
                     <select
                       id="p_branch"
                       value={formData.branch}
-                      onChange={(e) => updateField('branch', e.target.value)}
+                      onChange={(e) => updateField("branch", e.target.value)}
                     >
                       <option value="">-- Select Branch --</option>
                       {BRANCHES.map((b) => (
@@ -298,7 +308,8 @@ export default function BookingForm() {
                 <FaCheckCircle className={styles.successIcon} size={64} />
                 <h3 className={styles.successTitle}>Booking Successful!</h3>
                 <p className={styles.successText}>
-                  Your appointment has been registered. A confirmation text and email have been dispatched with details.
+                  Your appointment has been registered. A confirmation text and
+                  email have been dispatched with details.
                 </p>
 
                 <div className={styles.summaryCard}>
@@ -308,26 +319,32 @@ export default function BookingForm() {
                   </div>
                   <div className={styles.summaryRow}>
                     <span className={styles.summaryLabel}>Doctor:</span>
-                    <span className={styles.summaryVal}>{selectedDoctorObj?.name}</span>
+                    <span className={styles.summaryVal}>
+                      {selectedDoctorObj?.name}
+                    </span>
                   </div>
                   <div className={styles.summaryRow}>
                     <span className={styles.summaryLabel}>Branch:</span>
-                    <span className={styles.summaryVal}>{selectedBranchObj?.name} Branch</span>
+                    <span className={styles.summaryVal}>
+                      {selectedBranchObj?.name} Branch
+                    </span>
                   </div>
                   <div className={styles.summaryRow}>
                     <span className={styles.summaryLabel}>Date:</span>
                     <span className={styles.summaryVal}>
-                      {formData.date.toLocaleDateString('en-IN', {
-                        weekday: 'short',
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
+                      {formData.date.toLocaleDateString("en-IN", {
+                        weekday: "short",
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
                       })}
                     </span>
                   </div>
                   <div className={styles.summaryRow}>
                     <span className={styles.summaryLabel}>Time:</span>
-                    <span className={styles.summaryVal}>{formData.timeSlot}</span>
+                    <span className={styles.summaryVal}>
+                      {formData.timeSlot}
+                    </span>
                   </div>
                 </div>
 
@@ -337,13 +354,13 @@ export default function BookingForm() {
                   onClick={() => {
                     setStep(1);
                     setFormData({
-                      doctorId: '',
+                      doctorId: "",
                       date: new Date(),
-                      timeSlot: '',
-                      name: '',
-                      email: '',
-                      phone: '',
-                      branch: '',
+                      timeSlot: "",
+                      name: "",
+                      email: "",
+                      phone: "",
+                      branch: "",
                     });
                   }}
                 >
@@ -357,7 +374,11 @@ export default function BookingForm() {
           {step < 4 && (
             <div className={styles.formControls}>
               {step > 1 && (
-                <button type="button" className={styles.backBtn} onClick={handleBack}>
+                <button
+                  type="button"
+                  className={styles.backBtn}
+                  onClick={handleBack}
+                >
                   Back
                 </button>
               )}
@@ -367,7 +388,7 @@ export default function BookingForm() {
                 onClick={handleNext}
                 disabled={!isStepValid()}
               >
-                {step === 3 ? 'Confirm Booking' : 'Continue'}
+                {step === 3 ? "Confirm Booking" : "Continue"}
               </button>
             </div>
           )}

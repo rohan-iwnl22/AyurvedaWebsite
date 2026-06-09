@@ -33,28 +33,30 @@ export default function TreatmentsSection() {
       path: "/treatment/virechana",
     },
     {
-      // image: "/images/basti.jpg",
+      image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/basti.jpg",
       title: "Basti",
       description:
         "Herbal oils and decoctions administered rectally to directly pacify Vata — the root of most diseases. Highly effective for joint, neurological, and digestive conditions.",
       path: "/treatment/basti",
     },
     {
-      // image: "/images/nasya.jpg",
+      image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/nasya.jpg",
       title: "Nasya",
       description:
         "Medicated oils instilled through the nasal passage to cleanse the cranial region — relieving sinusitis, migraine, cervical stiffness, and sensory disorders effectively.",
       path: "/treatment/nasya",
     },
     {
-      // image: "/images/raktamokshana.jpg",
+      image:
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/leech_threrapy.jpg",
       title: "Raktamokshana (Leech Therapy)",
       description:
         "A precise Panchakarma procedure that eliminates blood-borne toxins — classically indicated for skin disorders, gout, varicose veins, and chronic Pitta conditions.",
       path: "/treatment/raktamokshana",
     },
     {
-      // image: "/images/shirodhara.jpg",
+      image:
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/shirodhara.jpg",
       title: "Shirodhara",
       description:
         "A warm stream of medicated oil flows gently over the forehead, calming the nervous system and offering profound relief in stress, anxiety, insomnia, and depression.",

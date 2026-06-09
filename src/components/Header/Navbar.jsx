@@ -104,6 +104,10 @@ export default function Navbar() {
         },
       ],
     },
+    // {
+    //   label: "Our Products",
+    //   path: "/contact",
+    // },
   ];
 
   // Split wellness children into two halves

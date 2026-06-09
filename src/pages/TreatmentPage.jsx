@@ -106,7 +106,7 @@ const TREATMENT_DB = {
     title: "Basti",
     subtitle:
       "Medicated Enema Therapy THE KING OF PANCHAKARMA — VATA PACIFICATION",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/basti.jpg",
     intro:
       "Regarded as the most significant of all Panchakarma procedures, Basti involves the administration of medicated herbal oils or decoctions through the rectal route. It directly pacifies Vata — the primary Dosha governing all movement and neurological function — making it one of the most therapeutically powerful treatments in classical Ayurveda.",
     // description: "",
@@ -132,7 +132,7 @@ const TREATMENT_DB = {
     title: "Nasya",
     subtitle:
       "Nasal Instillation Therapy CRANIAL PURIFICATION & SENSORY RESTORATION",
-    image: "/images/nasayam1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/nasya.jpg",
     intro:
       "Nasya is a specialised Panchakarma procedure involving the therapeutic administration of medicated oils or herbal preparations through the nasal passage — the designated gateway to the brain and cranial structures in classical Ayurveda. It effectively purifies the entire head, neck, and sensory organ region.",
     // description: "",
@@ -158,7 +158,8 @@ const TREATMENT_DB = {
     title: "Raktamokshana",
     subtitle:
       "Blood Purification Therapy BLOOD DETOXIFICATION & PITTA ELIMINATION",
-    image: "/images/potali-1.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/leech_threrapy.jpg",
     intro:
       "Raktamokshana is a unique and powerful Panchakarma procedure involving the controlled purification of vitiated Rakta (blood) to eliminate blood-borne toxins from the body. Performed with strict clinical precision at Ayurmana, it is classically indicated for conditions arising from impurities within the blood tissue.",
     // description: "",
@@ -183,7 +184,7 @@ const TREATMENT_DB = {
   shirodhara: {
     title: "Shirodhara",
     subtitle: "Continuous Oil Flow Therapy NEURO-CALMING & STRESS ELIMINATION",
-    image: "/images/vertical1.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/shirodhara.jpg",
     intro:
       "Shirodhara is a profoundly therapeutic classical procedure wherein a steady, uninterrupted stream of warm medicated oil is poured gently and continuously over the forehead. It directly calms the central nervous system, pacifies Vata and Pitta Doshas, and induces a state of deep physiological and mental stillness.",
     // description: "",
@@ -420,7 +421,7 @@ const TREATMENT_DB2 = {
     recommendation:
       "8 to 14 sessions, paired with strict dietary modifications as prescribed.",
   },
-  ericoseVeins: {
+  varicoseVeins: {
     title: "Varicose Veins",
     subtitle: "Therapy VENOUS RESTORATION & CIRCULATORY HEALING",
     image:
@@ -522,7 +523,7 @@ const TREATMENT_DB2 = {
     recommendation:
       "8 to 14 sessions depending on severity and physician prescription.",
   },
-  cervicalSpondilitis: {
+  cervicalSpondylitis: {
     title: "Cervical Spondylitis",
     subtitle: "Therapy CERVICAL RESTORATION & NECK PAIN RELIEF",
     image:
@@ -624,11 +625,11 @@ const TREATMENT_DB2 = {
       "21 to 28 sessions as part of a structured neurological rehabilitation program.",
   },
   pcos: {
-    title: "PCOS / PCOD Management",
+    title: "PCOS / PMOS Management",
     subtitle: "Therapy HORMONAL REBALANCING & OVARIAN HEALTH RESTORATION",
     image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/pcos%20pmod.jpg",
     intro:
-      "PCOS and PCOD are increasingly prevalent conditions rooted in aggravated Kapha and Vata Doshas combined with impaired Agni (metabolic fire). Ayurmana's PCOS management protocol combines Virechana, Udvartana, Basti, and precisely prescribed herbal formulations to regulate hormonal cycles, manage cyst formation, and restore ovarian health naturally.",
+      "PCOS and PMOS are increasingly prevalent conditions rooted in aggravated Kapha and Vata Doshas combined with impaired Agni (metabolic fire). Ayurmana's PCOS management protocol combines Virechana, Udvartana, Basti, and precisely prescribed herbal formulations to regulate hormonal cycles, manage cyst formation, and restore ovarian health naturally.",
     // description: "",
     benefits: [
       "Regulates menstrual cycles and hormonal balance naturally",
@@ -638,7 +639,7 @@ const TREATMENT_DB2 = {
     ],
     indications: [
       "PCOS",
-      "PCOD",
+      "PMOS",
       "Irregular Menstruation",
       "Hormonal Imbalance",
       "Ovarian Cysts",
@@ -1004,7 +1005,7 @@ export default function TreatmentPage() {
                   </div>
 
                   <Link
-                    to="/#booking"
+                    to="#"
                     className="btn btn-primary"
                     style={{ width: "100%" }}
                   >
