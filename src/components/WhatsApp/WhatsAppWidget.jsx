@@ -22,7 +22,7 @@ export default function WhatsAppWidget() {
             <div className={styles.popupHeader}>
               <div className={styles.avatar}>P</div>
               <div className={styles.headerInfo}>
-                <h4>Prana Ayurvedic</h4>
+                <h4>Ayurmana Ayurvedic</h4>
                 <span>Online | Typically replies in minutes</span>
               </div>
             </div>
