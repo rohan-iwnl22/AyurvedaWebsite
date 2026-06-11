@@ -87,7 +87,7 @@ export default function TreatmentsSection() {
     },
     {
       image:
-        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kati%20vastli.jpg",
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/changedKatiVasti.jpg",
       title: "Kati Vasti",
       description:
         "Warm medicated oil retained on the lower back to lubricate the spine, relieve nerve pressure, and heal conditions like sciatica, slipped disc, and lumbar spondylosis.",

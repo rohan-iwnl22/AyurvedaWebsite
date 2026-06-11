@@ -99,7 +99,7 @@ export default function AboutUs() {
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
-            About
+            About Us
           </h1>
 
           <h1
@@ -111,7 +111,18 @@ export default function AboutUs() {
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
-            Ayurmana - Classical Ayurveda. Personalised Care. Lasting Results.
+            Ayurmana - Classical Ayurveda. Personalised Care.
+          </h1>
+          <h1
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "white",
+              marginBottom: "1rem",
+              fontSize: "2.5rem",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+            }}
+          >
+            Lasting Results.
           </h1>
 
           <p

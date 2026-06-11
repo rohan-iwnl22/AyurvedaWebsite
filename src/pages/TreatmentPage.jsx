@@ -290,7 +290,7 @@ const TREATMENT_DB = {
     subtitle:
       "Lower Back Treatment TARGETED SPINE REJUVENATION & LUMBAR RESTORATION",
     image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kati%20vastli.jpg",
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/changedKatiVasti.jpg",
     intro:
       "Kati Vasti is a highly effective classical treatment where warm medicated herbal oil is retained on the lower back within a localised reservoir made of black gram dough. This therapy lubricates the spine, relieves pressure on nerve roots, and deeply nourishes the muscle fibres and skeletal structure of the lumbar region.",
     // description: "",
