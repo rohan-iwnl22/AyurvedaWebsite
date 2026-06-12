@@ -1,0 +1,413 @@
+.page {
+  background:
+    radial-gradient(circle at top left, rgba(197, 165, 90, 0.08), transparent 24%),
+    linear-gradient(180deg, #f8f5ee 0%, #fffdf9 28%, #ffffff 100%);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0 90px;
+  background:
+    linear-gradient(135deg, rgba(21, 61, 43, 0.98), rgba(34, 82, 58, 0.92)),
+    url("https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/diet.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.14), transparent 22%),
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.1), transparent 18%),
+    linear-gradient(180deg, rgba(8, 28, 21, 0.2), rgba(8, 28, 21, 0.45));
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+}
+
+.eyebrow,
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 1rem 0 1.25rem;
+  color: white;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.heroText {
+  max-width: 780px;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.heroCard {
+  margin-top: 2rem;
+  max-width: 760px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+}
+
+.heroCardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  color: var(--color-primary-dark);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+}
+
+.heroCard p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+}
+
+.section,
+.sectionAlt {
+  padding: 78px 0;
+}
+
+.sectionAlt {
+  background:
+    linear-gradient(180deg, rgba(250, 247, 239, 0.85), rgba(255, 255, 255, 0.96));
+}
+
+.approachGrid,
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.sectionIntro h2,
+.sectionHeader h2,
+.ctaCard h2 {
+  color: var(--color-primary-dark);
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
+  margin: 0.8rem 0 1rem;
+  line-height: 1.15;
+}
+
+.sectionIntro p,
+.ctaCard p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.approachQuote {
+  border: 1px solid rgba(197, 165, 90, 0.28);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(250, 247, 239, 0.96));
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.quoteIcon {
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.approachQuote p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.sectionHeader {
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.offerCard {
+  height: 100%;
+  padding: 1.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff, rgba(250, 247, 239, 0.8));
+  box-shadow: var(--shadow-sm);
+}
+
+.offerIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(197, 165, 90, 0.16);
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.offerCard h3,
+.timelineItem h3 {
+  color: var(--color-primary-dark);
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.offerCard p,
+.timelineItem p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.checkList {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.checkList li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+.checkList svg {
+  color: var(--color-accent);
+  margin-top: 0.25rem;
+  flex: 0 0 auto;
+}
+
+.conditionsCard {
+  padding: 1.6rem;
+  border: 1px solid rgba(197, 165, 90, 0.28);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff, rgba(250, 247, 239, 0.92));
+  box-shadow: var(--shadow-md);
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.chip {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(197, 165, 90, 0.3);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-primary-dark);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.comparisonTable {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.comparisonCell,
+.comparisonCellStrong {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.comparisonCellStrong {
+  border-color: rgba(197, 165, 90, 0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(250, 247, 239, 0.9));
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.comparisonArrow {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.timelineItem {
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff, rgba(250, 247, 239, 0.82));
+  box-shadow: var(--shadow-sm);
+  min-height: 100%;
+}
+
+.timelineStep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.95rem;
+  border-radius: 50%;
+  background: rgba(197, 165, 90, 0.18);
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.ctaSection {
+  padding: 0 0 90px;
+}
+
+.ctaCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 24px;
+  color: white;
+  background:
+    linear-gradient(135deg, rgba(21, 61, 43, 0.98), rgba(34, 82, 58, 0.94));
+  box-shadow: var(--shadow-premium);
+}
+
+.ctaCard h2,
+.ctaCard p,
+.ctaCard .sectionLabel {
+  color: white;
+}
+
+.ctaCard .sectionLabel {
+  color: var(--color-accent);
+}
+
+.quoteBlock {
+  margin: 1.6rem 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(197, 165, 90, 0.75);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.75;
+}
+
+.ctaActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 280px;
+  justify-self: end;
+}
+
+@media (max-width: 1100px) {
+  .offerGrid,
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ctaCard {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaActions {
+    justify-self: start;
+    min-width: 0;
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .approachGrid,
+  .twoColumn {
+    grid-template-columns: 1fr;
+  }
+
+  .comparisonRow {
+    grid-template-columns: 1fr;
+  }
+
+  .comparisonArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 92px 0 76px;
+  }
+
+  .section,
+  .sectionAlt {
+    padding: 60px 0;
+  }
+
+  .offerGrid,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCard {
+    padding: 1.1rem 1rem;
+  }
+
+  .ctaActions {
+    width: 100%;
+    max-width: none;
+  }
+
+  .quoteBlock {
+    margin-top: 1.25rem;
+  }
+}

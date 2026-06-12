@@ -47,6 +47,7 @@ export default function Navbar() {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about-us" },
+    { label: "Nutrition", path: "/nutrition" },
     {
       label: "Wellness",
       path: "#",

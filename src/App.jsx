@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
+import NutritionPage from './pages/NutritionPage';
 import TreatmentPage from './pages/TreatmentPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import './styles/global.css';
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/nutrition" element={<NutritionPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:productId" element={<ProductDetailPage />} />
