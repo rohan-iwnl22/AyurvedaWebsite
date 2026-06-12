@@ -90,8 +90,54 @@ export default function Navbar() {
         {
           label: "Specialised Treatments",
           path: "/treatment/specialisedTreatments",
+          children: [
+            {
+              label: "Height Increase Treatment",
+              path: "/treatment/heightIncrease",
+            },
+            {
+              label: "Weight Loss Treatment",
+              path: "/treatment/weightLoss",
+            },
+            {
+              label: "Piles and Fissure Treatment",
+              path: "/treatment/pilesAndFissure",
+            },
+            {
+              label: "Skin Problems",
+              path: "/treatment/skinProblems",
+              children: [
+                { label: "Vitiligo", path: "/treatment/vitiligo" },
+                { label: "Psoriasis", path: "/treatment/psoriasis" },
+                {
+                  label: "Fungal Infection",
+                  path: "/treatment/fungalInfection",
+                },
+                {
+                  label: "Eczema Treatment",
+                  path: "/treatment/eczemaTreatment",
+                },
+                { label: "Acne", path: "/treatment/acne" },
+                {
+                  label: "Hives Treatment",
+                  path: "/treatment/hivesTreatment",
+                },
+              ],
+            },
+            {
+              label: "Hair Treatment",
+              path: "/treatment/hairTreatment",
+              children: [
+                { label: "HairFall", path: "/treatment/hairFall" },
+                {
+                  label: "Premature Greying",
+                  path: "/treatment/prematureGreying",
+                },
+                { label: "Dandruff", path: "/treatment/dandruff" },
+              ],
+            },
+          ],
         },
-        { label: "Diet Counselling", path: "/treatment/dietCounselling" },
       ],
     },
     {
@@ -123,6 +169,86 @@ export default function Navbar() {
   const treatmentsMidPoint = Math.ceil(treatmentsChildren.length / 2);
   const treatmentsFirstHalf = treatmentsChildren.slice(0, treatmentsMidPoint);
   const treatmentsSecondHalf = treatmentsChildren.slice(treatmentsMidPoint);
+
+  const renderDropdownItem = (child) => {
+    if (child.label === "Specialised Treatments") {
+      const coreItems = child.children.filter((item) => !item.children);
+      const nestedGroups = child.children.filter((item) => item.children);
+
+      return (
+        <li
+          key={child.label}
+          className={`${styles.dropdownGroup} ${styles.specializedGroup}`}
+        >
+          <Link to={child.path} className={styles.dropdownGroupTitle}>
+            {child.label}
+          </Link>
+
+          <div className={styles.specializedPanel}>
+            <div className={styles.specializedCore}>
+              {coreItems.map((coreItem) => (
+                <Link
+                  key={coreItem.label}
+                  to={coreItem.path}
+                  className={styles.specializedCoreLink}
+                >
+                  {coreItem.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className={styles.specializedGrid}>
+              {nestedGroups.map((group) => (
+                <div key={group.label} className={styles.specializedNestedCard}>
+                  <Link
+                    to={group.path}
+                    className={styles.specializedNestedTitle}
+                  >
+                    {group.label}
+                  </Link>
+                  <ul className={styles.specializedNestedList}>
+                    {group.children.map((leaf) => (
+                      <li key={leaf.label}>
+                        <Link
+                          to={leaf.path}
+                          className={styles.specializedNestedLink}
+                        >
+                          {leaf.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </li>
+      );
+    }
+
+    if (child.children && child.children.length > 0) {
+      return (
+        <li key={child.label} className={styles.dropdownGroup}>
+          <Link to={child.path} className={styles.dropdownGroupTitle}>
+            {child.label}
+          </Link>
+          <ul className={styles.dropdownSubList}>
+            {child.children.map((nestedChild) =>
+              renderDropdownItem(nestedChild),
+            )}
+          </ul>
+        </li>
+      );
+    }
+
+    return (
+      <li key={child.label} className={styles.dropdownItem}>
+        <Link to={child.path} className={styles.dropdownLink}>
+          {child.label}
+        </Link>
+      </li>
+    );
+  };
 
   const toggleMobileExpanded = (label) => {
     setMobileExpanded((prev) => ({
@@ -193,15 +319,27 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.label && (
                   <ul
-                    className={styles.dropdown}
+                    className={`${styles.dropdown} ${
+                      item.label === "Treatments"
+                        ? styles.dropdownRightAligned
+                        : ""
+                    }`}
                     style={
                       item.label === "Wellness" || item.label === "Treatments"
                         ? {
-                            minWidth: "500px",
+                            width:
+                              item.label === "Treatments"
+                                ? "min(980px, calc(100vw - 2rem))"
+                                : "500px",
+                            maxWidth:
+                              item.label === "Treatments"
+                                ? "calc(100vw - 2rem)"
+                                : "none",
                             display: "grid",
                             gridTemplateColumns: "1fr 1fr",
                             gap: "0.5rem",
                             padding: "1rem",
+                            alignItems: "start",
                           }
                         : {}
                     }
@@ -241,45 +379,13 @@ export default function Navbar() {
                       </>
                     ) : item.label === "Treatments" ? (
                       <>
+                        <div>{treatmentsFirstHalf.map(renderDropdownItem)}</div>
                         <div>
-                          {treatmentsFirstHalf.map((child) => (
-                            <li
-                              key={child.label}
-                              className={styles.dropdownItem}
-                            >
-                              <Link
-                                to={child.path}
-                                className={styles.dropdownLink}
-                              >
-                                {child.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </div>
-                        <div>
-                          {treatmentsSecondHalf.map((child) => (
-                            <li
-                              key={child.label}
-                              className={styles.dropdownItem}
-                            >
-                              <Link
-                                to={child.path}
-                                className={styles.dropdownLink}
-                              >
-                                {child.label}
-                              </Link>
-                            </li>
-                          ))}
+                          {treatmentsSecondHalf.map(renderDropdownItem)}
                         </div>
                       </>
                     ) : (
-                      item.children.map((child) => (
-                        <li key={child.label} className={styles.dropdownItem}>
-                          <Link to={child.path} className={styles.dropdownLink}>
-                            {child.label}
-                          </Link>
-                        </li>
-                      ))
+                      item.children.map(renderDropdownItem)
                     )}
                   </ul>
                 )}
@@ -398,17 +504,82 @@ export default function Navbar() {
                     {/* Mobile Expandable Submenu */}
                     {item.children && mobileExpanded[item.label] && (
                       <ul className={styles.mobileDropdown}>
-                        {item.children.map((child) => (
-                          <li key={child.label}>
-                            <Link
-                              to={child.path}
-                              className={styles.mobileDropdownLink}
-                              onClick={() => setIsMobileOpen(false)}
+                        {item.children.map((child) =>
+                          child.children && child.children.length > 0 ? (
+                            <li
+                              key={child.label}
+                              className={styles.mobileGroup}
                             >
-                              {child.label}
-                            </Link>
-                          </li>
-                        ))}
+                              <Link
+                                to={child.path}
+                                className={styles.mobileDropdownTitle}
+                                onClick={() => setIsMobileOpen(false)}
+                              >
+                                {child.label}
+                              </Link>
+                              <ul className={styles.mobileSubDropdown}>
+                                {child.children.map((nestedChild) =>
+                                  nestedChild.children &&
+                                  nestedChild.children.length > 0 ? (
+                                    <li
+                                      key={nestedChild.label}
+                                      className={styles.mobileNestedGroup}
+                                    >
+                                      <Link
+                                        to={nestedChild.path}
+                                        className={styles.mobileNestedTitle}
+                                        onClick={() => setIsMobileOpen(false)}
+                                      >
+                                        {nestedChild.label}
+                                      </Link>
+                                      <ul
+                                        className={styles.mobileNestedDropdown}
+                                      >
+                                        {nestedChild.children.map(
+                                          (leafChild) => (
+                                            <li key={leafChild.label}>
+                                              <Link
+                                                to={leafChild.path}
+                                                className={
+                                                  styles.mobileDropdownLink
+                                                }
+                                                onClick={() =>
+                                                  setIsMobileOpen(false)
+                                                }
+                                              >
+                                                {leafChild.label}
+                                              </Link>
+                                            </li>
+                                          ),
+                                        )}
+                                      </ul>
+                                    </li>
+                                  ) : (
+                                    <li key={nestedChild.label}>
+                                      <Link
+                                        to={nestedChild.path}
+                                        className={styles.mobileDropdownLink}
+                                        onClick={() => setIsMobileOpen(false)}
+                                      >
+                                        {nestedChild.label}
+                                      </Link>
+                                    </li>
+                                  ),
+                                )}
+                              </ul>
+                            </li>
+                          ) : (
+                            <li key={child.label}>
+                              <Link
+                                to={child.path}
+                                className={styles.mobileDropdownLink}
+                                onClick={() => setIsMobileOpen(false)}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          ),
+                        )}
                       </ul>
                     )}
                   </li>

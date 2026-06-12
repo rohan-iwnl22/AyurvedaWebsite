@@ -651,29 +651,224 @@ const TREATMENT_DB2 = {
       "14 to 21 sessions paired with dietary and lifestyle modifications.",
   },
   psoriasis: {
-    title: "Psoriasis Care",
-    subtitle: "Therapy SKIN PURIFICATION & CHRONIC SKIN DISORDER MANAGEMENT",
+    title: "Psoriasis Care Therapy",
+    subtitle: "BLOOD PURIFICATION & CHRONIC SKIN DISORDER MANAGEMENT",
     image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/psoraises.jpg",
     intro:
-      "Psoriasis, known as Ekakushtha in classical Ayurveda, is a chronic skin condition rooted in aggravated Vata and Kapha Doshas combined with deep-seated Ama toxins in the Rakta (blood) tissue. Ayurmana's Psoriasis Care protocol combines Virechana, Raktamokshana, medicated Takradhara, and precise internal herbal formulations to purify the blood, calm the immune response, and restore healthy skin function.",
+      "Psoriasis, described in classical Ayurveda as Kitibha Kushtha, is treated at Ayurmana through deep blood purification, targeted Panchakarma procedures, and classical herbal formulations — calming the immune response and restoring healthy skin naturally.",
     // description: "",
     benefits: [
-      "Purifies the blood and eliminates deep-seated skin toxins",
-      "Reduces scaling, inflammation, and psoriatic plaque formation",
+      "Purifies blood and eliminates deep-seated skin toxins",
+      "Reduces scaling, inflammation, and psoriatic plaques",
       "Calms the aggravated immune response at its root",
       "Restores healthy, clear, and nourished skin naturally",
     ],
+    procedure: [
+      "Raktamokshana",
+      "Leech Therapy",
+      "Vamana",
+      "Virechana",
+      "Basti",
+      "Chandan Lepa",
+    ],
     indications: [
-      "Psoriasis",
-      "Chronic Skin Disorders",
-      "Eczema",
-      "Skin Inflammation",
-      "Autoimmune Skin Conditions",
-      "Itching & Scaling",
+      "Plaque Psoriasis ",
+      "Guttate Psoriasis ",
+      "Erythrodermic Psoriasis",
+      "Pustular Psoriasis",
     ],
     // duration: "",
     recommendation:
-      "14 to 21 sessions paired with strict dietary modifications as prescribed.",
+      "14 to 21 sessions paired with strict dietary modifications.",
+  },
+  vitiligo: {
+    title: "Vitiligo / Leucoderma Treatment",
+    subtitle: "MELANIN RESTORATION & SKIN REPIGMENTATION THERAPY",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Ayurmana's Vitiligo Treatment is designed as a supportive Ayurvedic care program that focuses on improving skin nourishment, balancing Pitta and Rakta, supporting melanin-related tissue health, and providing patient-specific dietary and herbal guidance.",
+    benefits: [
+      "Restores natural melanin and skin pigmentation progressively",
+      "Purifies blood and eliminates autoimmune triggers",
+      "Reduces and eliminates depigmented patches naturally",
+      "No steroids or chemical interventions involved",
+    ],
+    procedure: ["Vamana", "Virechana", "Basti", "Leech Therapy", "Herbal Lepa"],
+    indications: [
+      "Vitiligo",
+      " Leucoderma",
+      " Depigmented Patches",
+      "Autoimmune Skin Disorders",
+    ],
+    recommendation: "6 months to 1 year of physician-supervised treatment.",
+  },
+  fungalInfection: {
+    title: "Fungal Infection / Ringworm Treatment",
+    subtitle: "TINEA INFECTION & DADRU KUSHTHA MANAGEMENT",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Fungal infections, described as Dadru Kushtha in classical Ayurveda, arise from aggravated Pitta and Kapha Doshas. At Ayurmana, classical anti-fungal herbal formulations and Dosha-specific medicines eliminate the infection completely and prevent recurrence.",
+    benefits: [
+      "Eliminates fungal infection at its root cause",
+      "Relieves itching, discolouration, and skin inflammation",
+      "Prevents recurrence through Dosha rebalancing",
+      "Effective for body, groin, scalp, and nail infections",
+    ],
+    indications: [
+      "Tinea Corporis ",
+      "Tinea Cruris ",
+      "Tinea Capitis",
+      "Tinea Unguium",
+      "Ringworm",
+    ],
+    recommendation:
+      "As prescribed by the physician based on type and severity.",
+  },
+  eczemaTreatment: {
+    title: "Eczema Treatment",
+    subtitle: "VICHARCHIKA KUSHTHA & CHRONIC DERMATITIS MANAGEMENT",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Eczema, described as Vicharchika in classical Ayurveda, is a chronic skin condition rooted in Kapha Dosha aggravation. At Ayurmana, Leech Therapy, classical herbal formulations, and targeted local applications resolve eczema completely and restore healthy skin function.",
+    benefits: [
+      "Relieves chronic itching, rashes, and skin exudation",
+      "Addresses root-cause Kapha and blood tissue imbalance",
+      "Prevents progression and recurrence of eczema",
+      "Restores healthy, nourished, and clear skin naturally",
+    ],
+    procedure: [
+      "Leech Therapy ",
+      "Hartal ",
+      "Mishran Lepa ",
+      "Chandan Powder Application",
+    ],
+    indications: [
+      "Atopic Dermatitis ",
+      "Seborrheic Dermatitis ",
+      "Allergic Contact Dermatitis",
+      "Chronic Eczema",
+    ],
+    recommendation:
+      "As prescribed by the physician based on severity and skin constitution.",
+  },
+  acne: {
+    title: "Acne / Pimple Treatment",
+    subtitle: "YUVAN PIDIKA & SEBACEOUS GLAND DISORDER MANAGEMENT",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Acne, described as Yuvan Pidika in classical Ayurveda, arises from aggravated Kapha, Vata, and Rakta Doshas. At Ayurmana, classical herbal face packs, internal purification medicines, and dietary correction resolve acne, prevent scarring, and address hormonal root causes effectively.",
+    benefits: [
+      "Reduces excess sebum and unclogs skin pores naturally",
+      "Eliminates acne-causing Dosha imbalances from within",
+      "Prevents scarring, hyperpigmentation, and recurrence",
+      "Addresses hormonal and dietary root causes effectively",
+    ],
+    indications: [
+      "Acne Vulgaris",
+      " Hormonal Acne",
+      " PCOS-Related Acne",
+      " Cystic Acne",
+      " Post-AcneScarring",
+    ],
+    recommendation:
+      "3 to 6 months of physician-supervised treatment with dietary modifications.",
+  },
+  hivesTreatment: {
+    title: "Urticaria / Itching / Hives Treatment",
+    subtitle: "SHITPITTA & ALLERGIC SKIN DISORDER MANAGEMENT",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Urticaria, described as Shitpitta in classical Ayurveda, is an allergic skin condition arising from aggravated Vata, Pitta, and Kapha Doshas. At Ayurmana, Panchakarma purification and classical herbal formulations eliminate the allergic response at its root — providing lasting, natural relief.",
+    benefits: [
+      "Eliminates root-cause Dosha imbalance triggering urticaria",
+      "Provides lasting relief from itching, wheals, and swelling",
+      "Reduces hypersensitivity and allergic response naturally",
+      "Prevents recurrence through complete Dosha rebalancing",
+    ],
+    procedure: ["Vamana", "Virechana"],
+    indications: [
+      "Urticaria ",
+      "Chronic Itching ",
+      "Hives ",
+      "Allergic Skin Reactions",
+      "Skin Swelling",
+    ],
+    recommendation:
+      "As prescribed by the physician based on severity and Dosha constitution.",
+  },
+  hairFall: {
+    title: "Hair Fall Treatment (Alopecia)",
+    subtitle: "KHALITYA & INDRALUPTA — HAIR REJUVENATION THERAPY",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Hair fall, described as Khalitya and Indralupta in classical Ayurveda, is primarily rooted in aggravated Pitta Dosha. At Ayurmana, Ayurvedic medicines, herbal oils, Nasya, and Panchakarma procedures effectively arrest hair fall and restore healthy hair growth naturally.",
+    benefits: [
+      "Arrests hair fall and stimulates natural regrowth",
+      "Nourishes hair roots and strengthens follicles",
+      "Addresses hormonal, nutritional, and stress-related causes",
+      "No chemical interventions involved",
+    ],
+    procedure: ["Vamana", "Virechana", "Basti", "Nasya", "Shirodhara"],
+    indications: [
+      "Generalised Hair Fall ",
+      "Alopecia ",
+      "Bald Patches",
+      "PCOS-Related Hair Loss",
+      "StressInduced Hair Loss",
+    ],
+    recommendation:
+      "As prescribed by the physician based on severity and Dosha constitution.",
+  },
+  prematureGreying: {
+    title: "Premature Greying Treatment",
+    subtitle: "PALITA — MELANIN RESTORATION & HAIR BLACKENING THERAPY",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Premature greying, described as Palita in classical Ayurveda, arises from aggravated Pitta and Vata Doshas depleting melanin in the hair roots. At Ayurmana, classical herbal formulations, medicated Shirodhara, and Panchakarma procedures restore natural hair colour and lustre over a structured course.",
+    benefits: [
+      "Restores natural melanin and hair blackness progressively",
+      "Arrests further greying and strengthens hair roots",
+      "Nourishes scalp and restores natural hair lustre",
+      "Addresses stress, nutritional, and hormonal root causes",
+    ],
+    procedure: [
+      "Kumkumadi Ghrita Nasya ",
+      "Shirodhara ",
+      "Vamana ",
+      "Virechana",
+      "Basti",
+    ],
+    indications: [
+      "Premature Greying",
+      "Early Whitening",
+      "Stress-Induced Greying",
+      "Nutritional Deficiency",
+      "Hereditary Greying",
+    ],
+    recommendation: "6 months to 1 year of physician-supervised treatment.",
+  },
+  dandruff: {
+    title: "Dandruff Treatment (Darunak)",
+    subtitle: "SCALP PURIFICATION & DANDRUFF ELIMINATION THERAPY",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Dandruff, described as Darunak in classical Ayurveda, arises from aggravated Vata, Pitta, and Rakta Doshas causing scalp dryness and flaking. At Ayurmana, medicated oiling, herbal hair washes, and Panchakarma procedures eliminate dandruff completely and restore a healthy, nourished scalp.",
+    benefits: [
+      "Eliminates dandruff and scalp flaking completely",
+      "Relieves itching, dryness, and burning of the scalp",
+      "Restores scalp health and natural moisture balance",
+      "Prevents recurrence through root-cause Dosha correction",
+    ],
+    procedure: ["Vamana", "Virechana", "Basti", " Shirodhara", " Nasya"],
+    indications: [
+      "Dandruff ",
+      "Scalp Dryness ",
+      "Scalp Itching ",
+      "Scalp Psoriasis ",
+      "Seborrheic Dermatitis",
+    ],
+    recommendation:
+      "As prescribed by the physician based on severity and Dosha constitution.",
   },
   migraine: {
     title: "Migraine Management",
@@ -699,6 +894,131 @@ const TREATMENT_DB2 = {
     // duration: "",
     recommendation:
       "7 to 14 sessions depending on frequency and physician prescription.",
+  },
+  heightIncrease: {
+    title: "NATURAL AYURVEDIC HEIGHT ENHANCEMENT & GROWTH RESTORATION",
+    // subtitle: "Growth Support & Postural Correction YOUNG AGE WELLNESS",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Ayurmana's clinically researched Height Increase Treatment Module supports natural growth in children and young adults through safe, proven Ayurvedic science — without steroids, hormonal injections, or surgical intervention. According to classical Ayurveda, Asthi Dhatu (bone tissue) is the primary factor governing height development. By systematically nourishing all seven Dhatus — Rasa, Rakta, Mamsa, Meda, Asthi, Majja, and Shukra — our module establishes a strong foundation for healthy, natural growth. Recommended for patients between 6 to 24 years of age. ",
+    benefits: [
+      "Stimulates natural bone growth by nourishing Asthi Dhatu ",
+      "Improves posture, spinal alignment, and body structure ",
+      "Builds confidence and eliminates height-related inferiority complex ",
+      "Completely safe — no steroids, hormones, or surgery involved ",
+    ],
+    beneficialFor: [
+      "Competitive Exam Aspirants",
+      "Personality Development",
+      "Genetic Short Stature",
+      "Nutritional Deficiency",
+      "Postural Defects",
+    ],
+    indications: [
+      "Short Stature",
+      "Stunted Growth",
+      "Postural Disorders",
+      "Nutritional Deficiencies",
+    ],
+    recommendation: "A structured 6-month physician-supervised program.",
+  },
+  weightLoss: {
+    title: "Postural Defects ",
+    subtitle: "AYURVEDIC MEDOROG TREATMENT & INCH LOSS THERAPY",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "In classical Ayurveda, obesity is described as Medoroga — rooted in aggravated Kapha Dosha and excess Med Dhatu accumulation. Ayurmana's structured Weight Loss Program combines physician-prescribed Ayurvedic medicines, Panchakarma detoxification, personalised diet, and lifestyle modification to address the root cause of weight gain — achieving safe, sustainable results without surgery or harmful interventions. Treatment continues until the patient's BMI is corrected to the healthy range of 18.5 to 24.9, followed by a Prakriti-based dietary and lifestyle plan to prevent recurrence. ",
+    benefits: [
+      "Safe, sustainable weight reduction of 5 to 6 kg per month",
+      "Eliminates excess Med Dhatu and restores Dosha balance ",
+      "Corrects BMI without side effects or surgical intervention",
+      "Addresses associated conditions — diabetes, hypertension, and thyroid disorders ",
+    ],
+    procedure: ["Vamana", "Virechana", "Lekhan Basti", "Udvartana"],
+    indications: [
+      "Obesity",
+      " High BMI ",
+      "Inch Gain",
+      " Metabolic Disorders",
+      "Diabetes",
+      "Hypertension",
+      "Thyroid Disorders",
+    ],
+    recommendation:
+      "Physician-supervised program until BMI is corrected below 25 — followed by lifelong dietary and lifestyle guidance. ",
+  },
+  pilesAndFissure: {
+    title: "Piles & Fissure Treatment ",
+    subtitle: "COMPLETE AYURVEDIC ARSHA CHIKITSA & ANAL HEALTH RESTORATION",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "In classical Ayurveda, piles are described as Arsha — arising from aggravated Doshas causing enlargement of vascular cushions in the anal region. At Ayurmana, piles and fissures are treated through Ayurvedic medicines and targeted Panchakarma procedures — addressing root-cause constipation and anal tissue degeneration without surgery. Dosha identification through Nadi Pariksha guides precise therapy selection for each patient.",
+    benefits: [
+      "Completely resolves hemorrhoids within 3 to 4 months ",
+      "Arrests bleeding effectively within 7 days of treatment",
+      "Addresses root-cause constipation for lasting relief",
+      "Eliminates the need for surgical intervention entirely",
+    ],
+    indications: [
+      "Bleeding & Non-Bleeding Piles",
+      "Anal Fissure",
+      "Chronic Constipation",
+      "Hemorrhoids",
+      "IBS ",
+    ],
+    procedure: [
+      "Matra Basti",
+      "Mrudu Virechana",
+      "Leech Therapy",
+      "Medicated Dhupana Chikitsa",
+    ],
+    recommendation:
+      "3 to 4 months of physician-supervised medicines combined with 8 days of Anuvasana Basti — supported by dietary modifications.",
+  },
+  skinProblems: {
+    title: "Skin Problems Treatment",
+    subtitle: "Skin Purification & Complexion Support",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "Ayurmana's Skin Problems Treatment focuses on balancing Pitta and Kapha, reducing Ama and blood-borne toxins, and supporting healthy skin appearance through classical detoxification, diet correction, and herbal external or internal care as needed.",
+    benefits: [
+      "Supports clearer, calmer, and healthier-looking skin",
+      "Helps reduce inflammation, itching, and recurring flare-ups",
+      "Assists in balancing internal causes of skin irritation",
+      "Promotes a more nourished and even skin texture",
+    ],
+    indications: [
+      "Acne",
+      "Eczema",
+      "Itching",
+      "Skin Rash",
+      "Pigmentation",
+      "General Skin Sensitivity",
+    ],
+    recommendation:
+      "Typically planned over 4 to 8 weeks, with food and lifestyle adjustments alongside therapy.",
+  },
+  hairTreatment: {
+    title: "Hair Treatment",
+    subtitle: "Scalp Nourishment & Hair Strength Support",
+    image: "/images/abhyangam.jpg",
+    intro:
+      "This specialised hair care program supports scalp health, hair root nourishment, reduced hair fall, dandruff management, and improved hair vitality using classical Ayurvedic scalp care, oils, cleansers, and internal support where appropriate.",
+    benefits: [
+      "Helps reduce hair fall and scalp dryness",
+      "Supports stronger roots and healthier hair growth",
+      "Improves scalp comfort and reduces dandruff tendency",
+      "Encourages long-term nourishment and hair vitality",
+    ],
+    indications: [
+      "Hair Fall",
+      "Dandruff",
+      "Dry Scalp",
+      "Weak Hair Roots",
+      "Premature Greying",
+    ],
+    recommendation:
+      "Often recommended as a 6 to 12 week care plan depending on the underlying cause and severity.",
   },
   specialisedTreatments: {
     title: "Specialised Treatment Programs",

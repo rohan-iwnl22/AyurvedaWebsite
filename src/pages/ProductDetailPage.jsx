@@ -7,10 +7,12 @@ const PRODUCT_DB = {
   chyawanprash: {
     id: "chyawanprash",
     title: "Chyawanprasha Rasayan",
-    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/chyawanprash.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/chyawanprash.jpg",
     brand: "Ayurmana",
     category: "Classical Ayurvedic Rasayana (Rejuvenative Tonic)",
-    dosageForm: "Semi-solid paste (Avaleha / Leha) — thick, jam-like consistency with a sweet, tangy, and mildly spiced taste.",
+    dosageForm:
+      "Semi-solid paste (Avaleha / Leha) — thick, jam-like consistency with a sweet, tangy, and mildly spiced taste.",
     packingSize: ["250 g", "500 g", "1 kg"],
     ingredients: [
       "Amla (Emblica officinalis) — Primary ingredient; richest natural source of Vitamin C",
@@ -49,15 +51,18 @@ const PRODUCT_DB = {
       "Diabetic patients should use under medical supervision (contains honey and sugar).",
       "Not recommended for individuals with active fever or Ama (toxin overload) — consult your physician.",
     ],
-    manufacturer: "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
+    manufacturer:
+      "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
   },
   suwarnaprash: {
     id: "suwarnaprash",
     title: "Suvarnaprasha (Suvarna Prashan)",
-    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/suwarnaprash.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/suwarnaprash.jpg",
     brand: "Ayurmana",
     category: "Classical Ayurvedic Rasayana | Paediatric Immunomodulator",
-    dosageForm: "Liquid oral drops — golden-yellow, aromatic herbal preparation in a ghee-honey base with Suvarna Bhasma.",
+    dosageForm:
+      "Liquid oral drops — golden-yellow, aromatic herbal preparation in a ghee-honey base with Suvarna Bhasma.",
     packingSize: ["5 ml", "10 ml", "15 ml", "30 ml"],
     ingredients: [
       "Suvarna Bhasma (Gold Ash) — Primary ingredient; potent medhya (brain tonic), immunomodulator, and Rasayana",
@@ -102,7 +107,8 @@ const PRODUCT_DB = {
       "Honey-based preparation — do not heat before administration.",
       "Keep out of reach of children (self-administration).",
     ],
-    manufacturer: "Manufactured by Ayurmana | Prepared as per Classical Ayurvedic Formulation | Contains Suvarna Bhasma — Authenticated & Quality Tested | No artificial preservatives",
+    manufacturer:
+      "Manufactured by Ayurmana | Prepared as per Classical Ayurvedic Formulation | Contains Suvarna Bhasma — Authenticated & Quality Tested | No artificial preservatives",
   },
   "sukesha-hair-wash-powder": {
     id: "sukesha-hair-wash-powder",
@@ -138,12 +144,14 @@ const PRODUCT_DB = {
       "For external use only",
       "Avoid contact with eyes — if contact occurs, rinse with plenty of water",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "sukesha-hair-oil": {
     id: "sukesha-hair-oil",
     title: "Sukesha Hair Oil",
-    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/sukesha-hair-oil.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/sukesha-hair-oil.jpg",
     brand: "Ayurmana",
     category: "Ayurvedic Herbal Hair Oil",
     dosageForm: "Herbal medicated oil (light, non-sticky formulation)",
@@ -176,7 +184,8 @@ const PRODUCT_DB = {
       "For external use only",
       "Perform patch test before first use",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "sukesha-hair-wash-powder": {
     id: "sukesha-hair-wash-powder",
@@ -207,11 +216,9 @@ const PRODUCT_DB = {
       "Rinse thoroughly with water",
       "Use 2 times per week",
     ],
-    precautions: [
-      "For external use only",
-      "Avoid contact with eyes",
-    ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    precautions: ["For external use only", "Avoid contact with eyes"],
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "abhyanga-oil": {
     id: "abhyanga-oil",
@@ -251,7 +258,8 @@ const PRODUCT_DB = {
       "For external use only",
       "Avoid contact with eyes and open wounds",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "udvartan-powder": {
     id: "udvartan-powder",
@@ -291,7 +299,8 @@ const PRODUCT_DB = {
       "Avoid contact with eyes",
       "Do not use on broken or irritated skin",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "shatavari-kalpa": {
     id: "shatavari-kalpa",
@@ -325,7 +334,8 @@ const PRODUCT_DB = {
       "Consult physician during pregnancy",
       "Not recommended without medical supervision for hormonal conditions",
     ],
-    manufacturer: "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
+    manufacturer:
+      "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
   },
   "durva-kalpa": {
     id: "durva-kalpa",
@@ -354,10 +364,9 @@ const PRODUCT_DB = {
       "Best taken on an empty stomach in the morning",
       "Continue for 4-8 weeks as directed by physician",
     ],
-    precautions: [
-      "Consult physician before use if pregnant or breastfeeding",
-    ],
-    manufacturer: "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
+    precautions: ["Consult physician before use if pregnant or breastfeeding"],
+    manufacturer:
+      "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
   },
   "pain-relief-oil": {
     id: "pain-relief-oil",
@@ -397,7 +406,8 @@ const PRODUCT_DB = {
       "Do not ingest",
       "Discontinue if skin irritation occurs",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
   "hand-crafted-soap": {
     id: "hand-crafted-soap",
@@ -433,11 +443,9 @@ const PRODUCT_DB = {
       "Pat dry; follow with moisturiser if needed",
       "Suitable for daily use",
     ],
-    precautions: [
-      "For external use only",
-      "Avoid contact with eyes",
-    ],
-    manufacturer: "Manufactured by Ayurmana | Handcrafted with natural ingredients | No harmful chemicals",
+    precautions: ["For external use only", "Avoid contact with eyes"],
+    manufacturer:
+      "Manufactured by Ayurmana | Handcrafted with natural ingredients | No harmful chemicals",
   },
   "bheem-kalpa": {
     id: "bheem-kalpa",
@@ -476,7 +484,8 @@ const PRODUCT_DB = {
       "Consult physician before use",
       "Not recommended for children under 3 years without medical supervision",
     ],
-    manufacturer: "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
+    manufacturer:
+      "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
   },
   "height-growth-kit": {
     id: "height-growth-kit",
@@ -512,7 +521,8 @@ const PRODUCT_DB = {
       "Results may vary based on genetics and lifestyle factors",
       "Not recommended after bone plate fusion (typically after 21 years)",
     ],
-    manufacturer: "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
+    manufacturer:
+      "Manufactured by Ayurmana | As per Classical Ayurvedic Formulation | No artificial preservatives",
   },
   "face-pack": {
     id: "face-pack",
@@ -556,7 +566,8 @@ const PRODUCT_DB = {
       "Perform patch test before first use",
       "Discontinue if skin irritation occurs",
     ],
-    manufacturer: "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
+    manufacturer:
+      "Manufactured by Ayurmana | 100% Natural & Ayurvedic | No harmful chemicals",
   },
 };
 
