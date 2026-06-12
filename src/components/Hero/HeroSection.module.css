@@ -1,11 +1,16 @@
 .hero {
   position: relative;
   min-height: 80vh;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-dark) 0%,
-    var(--color-primary) 100%
-  );
+  background-color: var(--color-primary-dark);
+  background-image: linear-gradient(
+      135deg,
+      rgba(18, 63, 49, 0.82) 0%,
+      rgba(44, 112, 89, 0.55) 100%
+    ),
+    var(--hero-bg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +18,19 @@
   color: var(--color-text-light);
   overflow: hidden;
   padding: 100px 0 140px 0;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(8, 28, 21, 0.2), rgba(8, 28, 21, 0.45));
+  z-index: 1;
+  pointer-events: none;
 }
 
 .heroContent {
@@ -77,6 +95,7 @@
     drop-shadow(0 0 12px rgba(210, 153, 75, 0.25));
   will-change: transform;
   transform-origin: center;
+  opacity: 0.9;
 }
 
 .leafLeft {
@@ -129,6 +148,7 @@
   .hero {
     min-height: 70vh;
     padding: 80px 0 100px 0;
+    background-position: center top;
   }
   .title {
     font-size: 2.75rem;

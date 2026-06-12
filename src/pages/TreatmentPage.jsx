@@ -367,11 +367,11 @@ const TREATMENT_DB = {
       "3 to 5 sessions depending on the condition and physician prescription.",
   },
   viddhakarma: {
-    title:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhi%20karmaa.jpg",
+    title: "Viddhakarma",
     subtitle:
       "Therapeutic Needling Therapy MARMA POINT STIMULATION & DOSHA REBALANCING",
-    image: "/images/vision.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhi%20karmaa.jpg",
     intro:
       "Viddhakarma is a classical Ayurvedic para-surgical procedure involving the precise needling of specific Marma points and body channels to stimulate energy flow, eliminate blocked Doshas, and restore physiological balance. Rooted in the Sushruta Samhita, it is one of the most targeted and effective classical interventions for pain and functional disorders.",
     // description: "",

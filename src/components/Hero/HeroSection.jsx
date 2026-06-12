@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import styles from "./HeroSection.module.css";
 
+const BGURL =
+  "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/backgroundImg.png";
+
 export default function HeroSection() {
   return (
-    <section className={styles.hero}>
+    <section
+      className={styles.hero}
+      style={{ "--hero-bg": `url("${BGURL}")` }}
+    >
       {/* Enhanced Animated Left Leaf */}
       <motion.svg
         className={styles.leafLeft}

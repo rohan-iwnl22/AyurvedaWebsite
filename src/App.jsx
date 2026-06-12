@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import TreatmentPage from './pages/TreatmentPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import './styles/global.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:productId" element={<ProductDetailPage />} />
           <Route path="/treatment/:treatmentId" element={<TreatmentPage />} />
         </Routes>
 
