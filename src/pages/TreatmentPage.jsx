@@ -236,7 +236,7 @@ const TREATMENT_DB = {
     title: "Patra Pottali",
     subtitle: "Leaf Bolus Therapy ANTI-INFLAMMATORY HEAT & HERBAL HEALING",
     image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/pattra%20potli.jpg",
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/patra_pottali.png",
     intro:
       "Patra Pottali is a specialised heat therapy in which fresh medicinal leaves combined with therapeutic herbs and oils are bundled into boluses and applied rhythmically to the body after heating. It delivers deep anti-inflammatory and analgesic benefits directly to affected joints, muscles, and tissues.",
     // description: "",
@@ -263,7 +263,7 @@ const TREATMENT_DB = {
     subtitle:
       "Bronze Plate Foot Therapy MARMA ACTIVATION & DEEP NERVOUS RESTORATION",
     image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kansya%20thali.jpg",
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kansya_thali.png",
     intro:
       "Kansya Thali is a deeply relaxing and therapeutically significant treatment involving the massage of the feet using a Kansya (bronze) bowl with medicated ghee. In classical Ayurveda, the feet contain vital Marma points directly connected to the organs, nervous system, and overall physiological balance of the entire body.",
     // description: "",
@@ -370,8 +370,7 @@ const TREATMENT_DB = {
     title: "Viddhakarma",
     subtitle:
       "Therapeutic Needling Therapy MARMA POINT STIMULATION & DOSHA REBALANCING",
-    image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhi%20karmaa.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhikarma.png",
     intro:
       "Viddhakarma is a classical Ayurvedic para-surgical procedure involving the precise needling of specific Marma points and body channels to stimulate energy flow, eliminate blocked Doshas, and restore physiological balance. Rooted in the Sushruta Samhita, it is one of the most targeted and effective classical interventions for pain and functional disorders.",
     // description: "",
@@ -653,7 +652,7 @@ const TREATMENT_DB2 = {
   psoriasis: {
     title: "Psoriasis Care Therapy",
     subtitle: "BLOOD PURIFICATION & CHRONIC SKIN DISORDER MANAGEMENT",
-    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/psoraises.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/psoraisis.jpg",
     intro:
       "Psoriasis, described in classical Ayurveda as Kitibha Kushtha, is treated at Ayurmana through deep blood purification, targeted Panchakarma procedures, and classical herbal formulations — calming the immune response and restoring healthy skin naturally.",
     // description: "",
@@ -684,7 +683,7 @@ const TREATMENT_DB2 = {
   vitiligo: {
     title: "Vitiligo / Leucoderma Treatment",
     subtitle: "MELANIN RESTORATION & SKIN REPIGMENTATION THERAPY",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vitiligo.jpg",
     intro:
       "Ayurmana's Vitiligo Treatment is designed as a supportive Ayurvedic care program that focuses on improving skin nourishment, balancing Pitta and Rakta, supporting melanin-related tissue health, and providing patient-specific dietary and herbal guidance.",
     benefits: [
@@ -705,7 +704,7 @@ const TREATMENT_DB2 = {
   fungalInfection: {
     title: "Fungal Infection / Ringworm Treatment",
     subtitle: "TINEA INFECTION & DADRU KUSHTHA MANAGEMENT",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/fungal.jpg",
     intro:
       "Fungal infections, described as Dadru Kushtha in classical Ayurveda, arise from aggravated Pitta and Kapha Doshas. At Ayurmana, classical anti-fungal herbal formulations and Dosha-specific medicines eliminate the infection completely and prevent recurrence.",
     benefits: [
@@ -727,7 +726,7 @@ const TREATMENT_DB2 = {
   eczemaTreatment: {
     title: "Eczema Treatment",
     subtitle: "VICHARCHIKA KUSHTHA & CHRONIC DERMATITIS MANAGEMENT",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/eczema.jpg",
     intro:
       "Eczema, described as Vicharchika in classical Ayurveda, is a chronic skin condition rooted in Kapha Dosha aggravation. At Ayurmana, Leech Therapy, classical herbal formulations, and targeted local applications resolve eczema completely and restore healthy skin function.",
     benefits: [
@@ -754,7 +753,7 @@ const TREATMENT_DB2 = {
   acne: {
     title: "Acne / Pimple Treatment",
     subtitle: "YUVAN PIDIKA & SEBACEOUS GLAND DISORDER MANAGEMENT",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/acne.jpg",
     intro:
       "Acne, described as Yuvan Pidika in classical Ayurveda, arises from aggravated Kapha, Vata, and Rakta Doshas. At Ayurmana, classical herbal face packs, internal purification medicines, and dietary correction resolve acne, prevent scarring, and address hormonal root causes effectively.",
     benefits: [
@@ -776,7 +775,7 @@ const TREATMENT_DB2 = {
   hivesTreatment: {
     title: "Urticaria / Itching / Hives Treatment",
     subtitle: "SHITPITTA & ALLERGIC SKIN DISORDER MANAGEMENT",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/hives.jpg",
     intro:
       "Urticaria, described as Shitpitta in classical Ayurveda, is an allergic skin condition arising from aggravated Vata, Pitta, and Kapha Doshas. At Ayurmana, Panchakarma purification and classical herbal formulations eliminate the allergic response at its root — providing lasting, natural relief.",
     benefits: [
@@ -799,7 +798,7 @@ const TREATMENT_DB2 = {
   hairFall: {
     title: "Hair Fall Treatment (Alopecia)",
     subtitle: "KHALITYA & INDRALUPTA — HAIR REJUVENATION THERAPY",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/hairfall.jpg",
     intro:
       "Hair fall, described as Khalitya and Indralupta in classical Ayurveda, is primarily rooted in aggravated Pitta Dosha. At Ayurmana, Ayurvedic medicines, herbal oils, Nasya, and Panchakarma procedures effectively arrest hair fall and restore healthy hair growth naturally.",
     benefits: [
@@ -822,7 +821,8 @@ const TREATMENT_DB2 = {
   prematureGreying: {
     title: "Premature Greying Treatment",
     subtitle: "PALITA — MELANIN RESTORATION & HAIR BLACKENING THERAPY",
-    image: "/images/abhyangam.jpg",
+    image:
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/premature_greying.png",
     intro:
       "Premature greying, described as Palita in classical Ayurveda, arises from aggravated Pitta and Vata Doshas depleting melanin in the hair roots. At Ayurmana, classical herbal formulations, medicated Shirodhara, and Panchakarma procedures restore natural hair colour and lustre over a structured course.",
     benefits: [
@@ -850,7 +850,7 @@ const TREATMENT_DB2 = {
   dandruff: {
     title: "Dandruff Treatment (Darunak)",
     subtitle: "SCALP PURIFICATION & DANDRUFF ELIMINATION THERAPY",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/dandruff.png",
     intro:
       "Dandruff, described as Darunak in classical Ayurveda, arises from aggravated Vata, Pitta, and Rakta Doshas causing scalp dryness and flaking. At Ayurmana, medicated oiling, herbal hair washes, and Panchakarma procedures eliminate dandruff completely and restore a healthy, nourished scalp.",
     benefits: [
@@ -898,7 +898,7 @@ const TREATMENT_DB2 = {
   heightIncrease: {
     title: "NATURAL AYURVEDIC HEIGHT ENHANCEMENT & GROWTH RESTORATION",
     // subtitle: "Growth Support & Postural Correction YOUNG AGE WELLNESS",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/height.jpg",
     intro:
       "Ayurmana's clinically researched Height Increase Treatment Module supports natural growth in children and young adults through safe, proven Ayurvedic science — without steroids, hormonal injections, or surgical intervention. According to classical Ayurveda, Asthi Dhatu (bone tissue) is the primary factor governing height development. By systematically nourishing all seven Dhatus — Rasa, Rakta, Mamsa, Meda, Asthi, Majja, and Shukra — our module establishes a strong foundation for healthy, natural growth. Recommended for patients between 6 to 24 years of age. ",
     benefits: [
@@ -925,7 +925,7 @@ const TREATMENT_DB2 = {
   weightLoss: {
     title: "Postural Defects ",
     subtitle: "AYURVEDIC MEDOROG TREATMENT & INCH LOSS THERAPY",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/weight.png",
     intro:
       "In classical Ayurveda, obesity is described as Medoroga — rooted in aggravated Kapha Dosha and excess Med Dhatu accumulation. Ayurmana's structured Weight Loss Program combines physician-prescribed Ayurvedic medicines, Panchakarma detoxification, personalised diet, and lifestyle modification to address the root cause of weight gain — achieving safe, sustainable results without surgery or harmful interventions. Treatment continues until the patient's BMI is corrected to the healthy range of 18.5 to 24.9, followed by a Prakriti-based dietary and lifestyle plan to prevent recurrence. ",
     benefits: [
@@ -950,7 +950,7 @@ const TREATMENT_DB2 = {
   pilesAndFissure: {
     title: "Piles & Fissure Treatment ",
     subtitle: "COMPLETE AYURVEDIC ARSHA CHIKITSA & ANAL HEALTH RESTORATION",
-    image: "/images/abhyangam.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/piles.png",
     intro:
       "In classical Ayurveda, piles are described as Arsha — arising from aggravated Doshas causing enlargement of vascular cushions in the anal region. At Ayurmana, piles and fissures are treated through Ayurvedic medicines and targeted Panchakarma procedures — addressing root-cause constipation and anal tissue degeneration without surgery. Dosha identification through Nadi Pariksha guides precise therapy selection for each patient.",
     benefits: [

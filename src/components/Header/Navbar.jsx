@@ -88,55 +88,40 @@ export default function Navbar() {
         { label: "PCOS / PMOS", path: "/treatment/pcos" },
         { label: "Psoriasis", path: "/treatment/psoriasis" },
         { label: "Migraine", path: "/treatment/migraine" },
+        { label: "Height Increase Treatment", path: "/treatment/heightIncrease" },
+        { label: "Weight Loss Treatment", path: "/treatment/weightLoss" },
+        { label: "Piles and Fissure Treatment", path: "/treatment/pilesAndFissure" },
         {
-          label: "Specialised Treatments",
-          path: "/treatment/specialisedTreatments",
+          label: "Skin Problems",
+          path: "/treatment/skinProblems",
           children: [
+            { label: "Vitiligo", path: "/treatment/vitiligo" },
+            { label: "Psoriasis", path: "/treatment/psoriasis" },
             {
-              label: "Height Increase Treatment",
-              path: "/treatment/heightIncrease",
+              label: "Fungal Infection",
+              path: "/treatment/fungalInfection",
             },
             {
-              label: "Weight Loss Treatment",
-              path: "/treatment/weightLoss",
+              label: "Eczema Treatment",
+              path: "/treatment/eczemaTreatment",
             },
+            { label: "Acne", path: "/treatment/acne" },
             {
-              label: "Piles and Fissure Treatment",
-              path: "/treatment/pilesAndFissure",
+              label: "Hives Treatment",
+              path: "/treatment/hivesTreatment",
             },
+          ],
+        },
+        {
+          label: "Hair Treatment",
+          path: "/treatment/hairTreatment",
+          children: [
+            { label: "HairFall", path: "/treatment/hairFall" },
             {
-              label: "Skin Problems",
-              path: "/treatment/skinProblems",
-              children: [
-                { label: "Vitiligo", path: "/treatment/vitiligo" },
-                { label: "Psoriasis", path: "/treatment/psoriasis" },
-                {
-                  label: "Fungal Infection",
-                  path: "/treatment/fungalInfection",
-                },
-                {
-                  label: "Eczema Treatment",
-                  path: "/treatment/eczemaTreatment",
-                },
-                { label: "Acne", path: "/treatment/acne" },
-                {
-                  label: "Hives Treatment",
-                  path: "/treatment/hivesTreatment",
-                },
-              ],
+              label: "Premature Greying",
+              path: "/treatment/prematureGreying",
             },
-            {
-              label: "Hair Treatment",
-              path: "/treatment/hairTreatment",
-              children: [
-                { label: "HairFall", path: "/treatment/hairFall" },
-                {
-                  label: "Premature Greying",
-                  path: "/treatment/prematureGreying",
-                },
-                { label: "Dandruff", path: "/treatment/dandruff" },
-              ],
-            },
+            { label: "Dandruff", path: "/treatment/dandruff" },
           ],
         },
       ],
@@ -167,66 +152,18 @@ export default function Navbar() {
   // Split treatments children into two halves
   const treatmentsChildren =
     menuItems.find((item) => item.label === "Treatments")?.children || [];
-  const treatmentsMidPoint = Math.ceil(treatmentsChildren.length / 2);
-  const treatmentsFirstHalf = treatmentsChildren.slice(0, treatmentsMidPoint);
-  const treatmentsSecondHalf = treatmentsChildren.slice(treatmentsMidPoint);
+  const sideBySideLabels = ["Skin Problems", "Hair Treatment"];
+  const sideBySideItems = treatmentsChildren.filter((item) =>
+    sideBySideLabels.includes(item.label),
+  );
+  const regularTreatments = treatmentsChildren.filter(
+    (item) => !sideBySideLabels.includes(item.label),
+  );
+  const treatmentsMidPoint = Math.ceil(regularTreatments.length / 2);
+  const treatmentsFirstHalf = regularTreatments.slice(0, treatmentsMidPoint);
+  const treatmentsSecondHalf = regularTreatments.slice(treatmentsMidPoint);
 
   const renderDropdownItem = (child) => {
-    if (child.label === "Specialised Treatments") {
-      const coreItems = child.children.filter((item) => !item.children);
-      const nestedGroups = child.children.filter((item) => item.children);
-
-      return (
-        <li
-          key={child.label}
-          className={`${styles.dropdownGroup} ${styles.specializedGroup}`}
-        >
-          <Link to={child.path} className={styles.dropdownGroupTitle}>
-            {child.label}
-          </Link>
-
-          <div className={styles.specializedPanel}>
-            <div className={styles.specializedCore}>
-              {coreItems.map((coreItem) => (
-                <Link
-                  key={coreItem.label}
-                  to={coreItem.path}
-                  className={styles.specializedCoreLink}
-                >
-                  {coreItem.label}
-                </Link>
-              ))}
-            </div>
-
-            <div className={styles.specializedGrid}>
-              {nestedGroups.map((group) => (
-                <div key={group.label} className={styles.specializedNestedCard}>
-                  <Link
-                    to={group.path}
-                    className={styles.specializedNestedTitle}
-                  >
-                    {group.label}
-                  </Link>
-                  <ul className={styles.specializedNestedList}>
-                    {group.children.map((leaf) => (
-                      <li key={leaf.label}>
-                        <Link
-                          to={leaf.path}
-                          className={styles.specializedNestedLink}
-                        >
-                          {leaf.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </li>
-      );
-    }
-
     if (child.children && child.children.length > 0) {
       return (
         <li key={child.label} className={styles.dropdownGroup}>
@@ -383,6 +320,9 @@ export default function Navbar() {
                         <div>{treatmentsFirstHalf.map(renderDropdownItem)}</div>
                         <div>
                           {treatmentsSecondHalf.map(renderDropdownItem)}
+                          <div className={styles.sideBySideGroup}>
+                            {sideBySideItems.map(renderDropdownItem)}
+                          </div>
                         </div>
                       </>
                     ) : (

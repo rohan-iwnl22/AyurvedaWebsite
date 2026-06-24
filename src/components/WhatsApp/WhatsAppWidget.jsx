@@ -6,7 +6,7 @@ import styles from "./WhatsAppWidget.module.css";
 export default function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const whatsappUrl =
-    "https://wa.me/919876543210?text=Hello%20Team%20PRANA%2C%20I%20would%20like%20to%20inquire%20about%20your%20Ayurvedic%20treatments.";
+    "https://wa.me/+919370771021?text=Hello%20Team%20Ayurmana%20Ayurved%20Clinic%2C%20I%20would%20like%20to%20inquire%20about%20your%20Ayurvedic%20treatments";
 
   return (
     <div className={styles.whatsappWidget}>

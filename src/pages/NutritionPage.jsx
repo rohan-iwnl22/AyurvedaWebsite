@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { FaCheckCircle, FaArrowRight, FaLeaf, FaSeedling } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaArrowRight,
+  FaLeaf,
+  FaSeedling,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AnimateOnScroll from "../components/AnimateOnScroll";
 import styles from "./NutritionPage.module.css";
@@ -99,6 +104,9 @@ const comparisonRows = [
   ["Symptom management", "Root-cause correction"],
 ];
 
+const nutritionBox =
+  "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/nutrition_Banner.png?updatedAt=1782297247266";
+
 export default function NutritionPage() {
   return (
     <main className={styles.page}>
@@ -134,6 +142,10 @@ export default function NutritionPage() {
             </p>
           </motion.div>
         </div>
+      </section>
+
+      <section className={styles.banner}>
+        <img src={nutritionBox} alt="Nutrition Box" className={styles.bannerImg} />
       </section>
 
       <section className={styles.section}>
@@ -270,17 +282,15 @@ export default function NutritionPage() {
 
       <section className={styles.ctaSection}>
         <div className={`${styles.ctaCard} container`}>
-          <div>
-            <span className={styles.sectionLabel}>Recommended Course</span>
-            <h2>Monthly follow-ups with progressive refinement</h2>
-            <p>
-              Initial consultation followed by monthly reviews, adjusted
-              progressively based on health outcomes and physician assessment.
-            </p>
-            <blockquote className={styles.quoteBlock}>
-              "Let food be thy medicine and medicine be thy food."
-            </blockquote>
-          </div>
+          <span className={styles.sectionLabel}>Recommended Course</span>
+          <h2>Monthly follow-ups with progressive refinement</h2>
+          <p>
+            Initial consultation followed by monthly reviews, adjusted
+            progressively based on health outcomes and physician assessment.
+          </p>
+          <p className={styles.quoteBlock}>
+            "Let food be thy medicine and medicine be thy food."
+          </p>
           <div className={styles.ctaActions}>
             <Link to="/contact" className="btn btn-accent">
               Book Your Nutrition Consultation
