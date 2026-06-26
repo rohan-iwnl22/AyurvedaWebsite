@@ -299,6 +299,24 @@
   color: var(--color-text-dark);
 }
 
+.slotGroup {
+  margin-bottom: 0.75rem;
+}
+
+.slotGroup:last-child {
+  margin-bottom: 0;
+}
+
+.slotGroupLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
 .slotsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

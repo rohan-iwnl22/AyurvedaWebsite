@@ -25,12 +25,14 @@ const DOCTORS = [
 ];
 
 const TIME_SLOTS = [
-  "09:00 AM",
-  "10:00 AM",
-  "11:30 AM",
-  "02:00 PM",
-  "03:30 PM",
-  "05:00 PM",
+  {
+    group: "Morning",
+    slots: ["11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM"],
+  },
+  {
+    group: "Evening",
+    slots: ["07:00 PM", "08:00 PM", "09:00 PM"],
+  },
 ];
 
 const BRANCHES = [{ id: "Akola", name: "Akola Branch" }];
@@ -214,22 +216,29 @@ export default function BookingForm() {
                   </div>
                   <div className={styles.slotsWrapper}>
                     <label className={styles.slotsTitle}>Available Slots</label>
-                    <div className={styles.slotsGrid}>
-                      {TIME_SLOTS.map((slot) => (
-                        <button
-                          key={slot}
-                          type="button"
-                          className={`${styles.slotBtn} ${
-                            formData.timeSlot === slot
-                              ? styles.slotSelected
-                              : ""
-                          }`}
-                          onClick={() => updateField("timeSlot", slot)}
-                        >
-                          {slot}
-                        </button>
-                      ))}
-                    </div>
+                    {TIME_SLOTS.map((group) => (
+                      <div key={group.group} className={styles.slotGroup}>
+                        <span className={styles.slotGroupLabel}>
+                          {group.group}
+                        </span>
+                        <div className={styles.slotsGrid}>
+                          {group.slots.map((slot) => (
+                            <button
+                              key={slot}
+                              type="button"
+                              className={`${styles.slotBtn} ${
+                                formData.timeSlot === slot
+                                  ? styles.slotSelected
+                                  : ""
+                              }`}
+                              onClick={() => updateField("timeSlot", slot)}
+                            >
+                              {slot}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>

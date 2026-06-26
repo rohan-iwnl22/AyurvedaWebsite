@@ -4,6 +4,8 @@ import {
   FaArrowRight,
   FaLeaf,
   FaSeedling,
+  FaCalendarCheck,
+  FaSpa,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AnimateOnScroll from "../components/AnimateOnScroll";
@@ -145,7 +147,11 @@ export default function NutritionPage() {
       </section>
 
       <section className={styles.banner}>
-        <img src={nutritionBox} alt="Nutrition Box" className={styles.bannerImg} />
+        <img
+          src={nutritionBox}
+          alt="Nutrition Box"
+          className={styles.bannerImg}
+        />
       </section>
 
       <section className={styles.section}>
@@ -280,26 +286,64 @@ export default function NutritionPage() {
         </div>
       </section>
 
+      {/* REDESIGNED CTA SECTION */}
       <section className={styles.ctaSection}>
-        <div className={`${styles.ctaCard} container`}>
-          <span className={styles.sectionLabel}>Recommended Course</span>
-          <h2>Monthly follow-ups with progressive refinement</h2>
-          <p>
+        {/* Floating decorative elements */}
+        <div className={styles.ctaDecor}>
+          <FaLeaf className={`${styles.ctaFloat} ${styles.ctaFloat1}`} />
+          <FaSeedling className={`${styles.ctaFloat} ${styles.ctaFloat2}`} />
+          <FaLeaf className={`${styles.ctaFloat} ${styles.ctaFloat3}`} />
+          <FaSpa className={`${styles.ctaFloat} ${styles.ctaFloat4}`} />
+        </div>
+
+        <motion.div
+          className={`${styles.ctaCard} container`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          {/* Decorative Leaf */}
+          <div className={styles.decorativeLeaf}>
+            <FaSpa />
+          </div>
+
+          {/* Badge */}
+          <span className={styles.ctaBadge}>Recommended Course</span>
+
+          {/* Title */}
+          <h2 className={styles.ctaTitle}>
+            Monthly Follow-Ups with <br />
+            <span className={styles.ctaHighlight}>Progressive Refinement</span>
+          </h2>
+
+          {/* Description */}
+          <p className={styles.ctaDescription}>
             Initial consultation followed by monthly reviews, adjusted
             progressively based on health outcomes and physician assessment.
           </p>
-          <p className={styles.quoteBlock}>
-            "Let food be thy medicine and medicine be thy food."
-          </p>
+
+          {/* Quote */}
+          <div className={styles.ctaQuoteWrapper}>
+            <FaLeaf className={styles.ctaQuoteIcon} />
+            <p className={styles.ctaQuote}>
+              "Let food be thy medicine and medicine be thy food."
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
           <div className={styles.ctaActions}>
-            <Link to="/contact" className="btn btn-accent">
+            <Link to="/contact" className={styles.ctaBtnPrimary}>
+              <FaCalendarCheck />
               Book Your Nutrition Consultation
+              <FaArrowRight className={styles.ctaBtnArrow} />
             </Link>
-            <Link to="/about-us" className="btn btn-outline-white">
+            <Link to="/about-us" className={styles.ctaBtnSecondary}>
               Learn More About Ayurmana
+              <FaArrowRight className={styles.ctaBtnArrow} />
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
     </main>
   );
