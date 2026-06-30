@@ -315,7 +315,7 @@ const TREATMENT_DB = {
     subtitle:
       "Eye Nourishment Therapy OCULAR REJUVENATION & VISION RESTORATION",
     image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/netra%20tapana.jpg",
+      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/netraTarpana.jpg",
     intro:
       "Netra Tarpana is a highly specialised classical Ayurvedic procedure wherein warm, freshly prepared medicated ghee is retained over the eyes within a carefully constructed reservoir of black gram dough. This deeply nourishing therapy directly feeds and rejuvenates the ocular tissues, strengthens the optic nerve, and restores the natural vitality of the eyes.",
     // description: "",
@@ -525,8 +525,7 @@ const TREATMENT_DB2 = {
   cervicalSpondylitis: {
     title: "Cervical Spondylitis",
     subtitle: "Therapy CERVICAL RESTORATION & NECK PAIN RELIEF",
-    image:
-      "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/d1e8cc29-9b28-4e7a-8688-0b7b21563362.jpg",
+    image: "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/cervicalS.jpg",
     intro:
       "Ayurmana's Cervical Spondylitis protocol employs Greeva Vasti, Nasya, Abhyanga, and Swedana to address degeneration and inflammation in the cervical vertebrae. This classical combination relieves nerve compression, reduces inflammation, and restores natural mobility and strength to the neck and shoulder region.",
     // description: "",

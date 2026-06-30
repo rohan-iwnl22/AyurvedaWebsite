@@ -71,7 +71,7 @@ export default function TreatmentsSection() {
     },
     {
       image:
-        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/pattra%20potli.jpg",
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/patra_pottali.png",
       title: "Patra Pottali",
       description:
         "Warm medicinal leaf boluses applied rhythmically to the body — deeply relieving arthritis, joint degeneration, muscular pain, and sports-related injuries.",
@@ -79,7 +79,7 @@ export default function TreatmentsSection() {
     },
     {
       image:
-        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kansya%20thali.jpg",
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/kansya_thali.png",
       title: "Kansya Thali",
       description:
         "A therapeutic bronze bowl massage on the feet — stimulating vital Marma points to relieve fatigue, improve vision, calm the mind, and promote deep restful sleep.",
@@ -95,7 +95,7 @@ export default function TreatmentsSection() {
     },
     {
       image:
-        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/netra%20tapana.jpg",
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/netraTarpana.jpg",
       title: "Netra Tarpana",
       description:
         "Warm medicated ghee retained over the eyes to nourish ocular tissues, strengthen vision, and effectively relieve dry eyes, eye strain, and computer vision syndrome.",

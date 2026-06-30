@@ -86,7 +86,7 @@ export default function Navbar() {
         { label: "Heart Disease", path: "/treatment/heartDisease" },
         { label: "Paralysis", path: "/treatment/paralysis" },
         { label: "PCOS / PMOS", path: "/treatment/pcos" },
-        { label: "Psoriasis", path: "/treatment/psoriasis" },
+        // { label: "Psoriasis", path: "/treatment/psoriasis" },
         { label: "Migraine", path: "/treatment/migraine" },
         { label: "Height Increase Treatment", path: "/treatment/heightIncrease" },
         { label: "Weight Loss Treatment", path: "/treatment/weightLoss" },
