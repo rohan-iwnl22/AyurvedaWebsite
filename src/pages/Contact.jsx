@@ -1,6 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import AnimateOnScroll from '../components/AnimateOnScroll';
+import styles from './Contact.module.css';
 
 const BRANCH_DETAILS = {
   akola: {
@@ -26,19 +27,10 @@ export default function Contact() {
   return (
     <div className="contact-page">
       {/* Hero header */}
-      <section
-        style={{
-          background: 'linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%)',
-          color: 'white',
-          padding: '100px 0 60px 0',
-          textAlign: 'center',
-        }}
-      >
+      <section className={styles.heroHeader}>
         <div className="container">
-          <h1 style={{ fontFamily: 'var(--font-heading)', color: 'white', marginBottom: '1rem' }}>
-            Contact Us
-          </h1>
-          <p style={{ color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 600 }}>
+          <h1>Contact Us</h1>
+          <p className={styles.heroSubtitle}>
             Connect with our Ayurveda Clinics
           </p>
         </div>
@@ -46,17 +38,17 @@ export default function Contact() {
 
       {/* Highlighted Branch Box */}
       {highlightedBranch && (
-        <section className="section" style={{ backgroundColor: 'rgba(197, 165, 90, 0.1)', padding: '40px 0' }}>
-          <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+        <section className={`section ${styles.highlightedBranch}`}>
+          <div className={`container ${styles.highlightedBranchInner}`}>
+            <span className={styles.highlightedBranchLabel}>
               Selected Location
             </span>
-            <h2 style={{ color: 'var(--color-primary-dark)', margin: '0.5rem 0 1rem 0' }}>{highlightedBranch.name}</h2>
-            <p style={{ fontSize: '1.05rem', color: 'var(--color-text-dark)', marginBottom: '1.5rem' }}>{highlightedBranch.address}</p>
-            <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <span style={{ fontWeight: 600 }}><FaPhoneAlt style={{ color: 'var(--color-accent)', marginRight: '0.5rem' }} /> {highlightedBranch.phone}</span>
-              <span style={{ fontWeight: 600 }}><FaEnvelope style={{ color: 'var(--color-accent)', marginRight: '0.5rem' }} /> {highlightedBranch.email}</span>
-              <span style={{ fontWeight: 600 }}>Timings: {highlightedBranch.timing}</span>
+            <h2 className={styles.highlightedBranchName}>{highlightedBranch.name}</h2>
+            <p className={styles.highlightedBranchAddress}>{highlightedBranch.address}</p>
+            <div className={styles.highlightedBranchDetails}>
+              <span><FaPhoneAlt style={{ color: 'var(--color-accent)', marginRight: '0.5rem' }} /> {highlightedBranch.phone}</span>
+              <span><FaEnvelope style={{ color: 'var(--color-accent)', marginRight: '0.5rem' }} /> {highlightedBranch.email}</span>
+              <span>Timings: {highlightedBranch.timing}</span>
             </div>
           </div>
         </section>
@@ -65,44 +57,44 @@ export default function Contact() {
       {/* Split layout: Form left, Branch selection list right */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '3rem' }}>
+          <div className={styles.splitLayout}>
             {/* Contact Form Column */}
             <AnimateOnScroll direction="right">
-              <div>
-                <h2 style={{ color: 'var(--color-primary-dark)', marginBottom: '1rem' }}>Send Us a Message</h2>
-                <p style={{ marginBottom: '2rem' }}>Fill out the details below, and our care coordinators will reach back shortly.</p>
-                
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                      <label htmlFor="c_name" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Your Name</label>
+              <div className={styles.formColumn}>
+                <h2>Send Us a Message</h2>
+                <p>Fill out the details below, and our care coordinators will reach back shortly.</p>
+
+                <form onSubmit={handleSubmit} className={styles.form}>
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="c_name">Your Name</label>
                       <input id="c_name" type="text" required placeholder="e.g. Amit Patil" />
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                      <label htmlFor="c_email" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Email Address</label>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="c_email">Email Address</label>
                       <input id="c_email" type="email" required placeholder="e.g. amit@example.com" />
                     </div>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label htmlFor="c_phone" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Phone Number</label>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="c_phone">Phone Number</label>
                     <input id="c_phone" type="tel" required placeholder="e.g. 94220XXXXX" />
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label htmlFor="c_branch" style={{ fontWeight: 600, fontSize: '0.9rem' }}>Preferred Branch</label>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="c_branch">Preferred Branch</label>
                     <select id="c_branch" defaultValue={branchParam || ""}>
                       <option value="">General Inquiry</option>
                       <option value="akola">Ayurmana Ayurvedic Clinic</option>
                     </select>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                    <label htmlFor="c_message" style={{ fontWeight: 600, fontSize: '0.9rem' }}>How can we help you?</label>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="c_message">How can we help you?</label>
                     <textarea id="c_message" rows="5" required placeholder="Write your message here..."></textarea>
                   </div>
 
-                  <button type="submit" className="btn btn-primary" style={{ alignSelf: 'flex-start' }}>
+                  <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
                     Send Message
                   </button>
                 </form>
@@ -111,31 +103,24 @@ export default function Contact() {
 
             {/* Branches Quick Directory */}
             <AnimateOnScroll direction="left">
-              <div>
-                <h2 style={{ color: 'var(--color-primary-dark)', marginBottom: '1.5rem' }}>Branch Quick Directory</h2>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div className={styles.branchColumn}>
+                <h2>Branch Quick Directory</h2>
+
+                <div className={styles.branchList}>
                   {Object.entries(BRANCH_DETAILS).map(([key, branch]) => (
                     <div
                       key={key}
-                      style={{
-                        padding: '1.25rem',
-                        borderRadius: '8px',
-                        border: '1px solid var(--color-border)',
-                        backgroundColor: 'var(--color-bg-light)',
-                        transition: 'all var(--transition-fast)',
-                        boxShadow: branchParam === key ? '0 0 0 2px var(--color-primary)' : 'none',
-                      }}
+                      className={`${styles.branchCard} ${branchParam === key ? styles.branchCardActive : ''}`}
                     >
-                      <h4 style={{ color: 'var(--color-primary-dark)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <h4 className={styles.branchCardTitle}>
                         <FaMapMarkerAlt style={{ color: 'var(--color-accent)' }} size={14} />
                         {branch.name}
                       </h4>
-                      <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}>{branch.address}</p>
-                      <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}><strong>Timings:</strong> {branch.timing}</p>
-                      <div style={{ display: 'flex', gap: '1.5rem', marginTop: '0.75rem', fontSize: '0.85rem' }}>
-                        <a href={`tel:${branch.phone.replace(/\s+/g, '')}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Call: {branch.phone}</a>
-                        <a href={`mailto:${branch.email}`} style={{ color: 'var(--color-primary)', fontWeight: 600 }}>Email</a>
+                      <p className={styles.branchCardAddress}>{branch.address}</p>
+                      <p className={styles.branchCardTiming}><strong>Timings:</strong> {branch.timing}</p>
+                      <div className={styles.branchCardActions}>
+                        <a href={`tel:${branch.phone.replace(/\s+/g, '')}`}>Call: {branch.phone}</a>
+                        <a href={`mailto:${branch.email}`}>Email</a>
                       </div>
                     </div>
                   ))}

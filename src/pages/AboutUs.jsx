@@ -1,4 +1,5 @@
 import AnimateOnScroll from "../components/AnimateOnScroll";
+import styles from "./AboutUs.module.css";
 
 const aboutUsBannerURl =
   "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/about%20us%20banner.jpeg";
@@ -40,120 +41,41 @@ export default function AboutUs() {
   return (
     <div className="about-page">
       {/* Hero Section with Banner Image */}
-      <section
-        style={{
-          position: "relative",
-          minHeight: "60vh",
-          padding: "clamp(5rem, 18vw, 8rem) 0 clamp(3rem, 10vw, 4rem)",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
+      <section className={styles.heroSection}>
         {/* Banner Image */}
         <img
           src={aboutUsBannerURl}
           alt="About Us Banner"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          className={styles.heroBanner}
         />
 
-        {/* Overlay - Now covers everything including sides */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background:
-              "linear-gradient(135deg, rgba(0, 51, 35, 0.85) 0%, rgba(0, 102, 68, 0.85) 100%)",
-          }}
-        />
+        {/* Overlay */}
+        <div className={styles.heroOverlay} />
 
         {/* Content */}
-        <div
-          className="container"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 20px",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "var(--font-heading)",
-              color: "white",
-              marginBottom: "0.5rem",
-              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-            }}
-          >
+        <div className={`container ${styles.heroContent}`}>
+          <h1 className={styles.heroTitle}>
             About Us
           </h1>
 
-          <h1
-            style={{
-              fontFamily: "var(--font-heading)",
-              color: "white",
-              marginBottom: "1rem",
-              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-            }}
-          >
+          <h1 className={styles.heroTitle}>
             Ayurmana - Classical Ayurveda. Personalised Care.
           </h1>
-          <h1
-            style={{
-              fontFamily: "var(--font-heading)",
-              color: "white",
-              marginBottom: "1rem",
-              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
-            }}
-          >
+          <h1 className={styles.heroTitleLast}>
             Lasting Results.
           </h1>
 
-          <p
-            style={{
-              color: "#FFD700",
-              textTransform: "uppercase",
-              letterSpacing: "0.15em",
-              fontWeight: 600,
-              textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
-            }}
-          >
+          <p className={styles.heroSubtitle}>
             Our Heritage & Modern Ayurvedic Care
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section
-        className="section"
-        style={{ backgroundColor: "var(--color-bg-white)" }}
-      >
-        <div className="container" style={{ maxWidth: "800px" }}>
+      <section className={`section ${styles.contentSection}`}>
+        <div className={`container ${styles.contentContainer}`}>
           <AnimateOnScroll direction="up">
-            <p
-              style={{
-                marginBottom: "1.5rem",
-                lineHeight: "1.7",
-                fontSize: "1.05rem",
-              }}
-            >
+            <p className={styles.contentParagraph}>
               The name Ayurmana reflects our deepest purpose — to enrich the
               quality and extend the span of every life we touch. Founded in the
               heart of Akola, our clinic was established with a singular vision
@@ -163,13 +85,7 @@ export default function AboutUs() {
               classical Ayurvedic medicine, comprehensive Panchakarma therapies,
               and integrative nutritional wellness.
             </p>
-            <p
-              style={{
-                marginBottom: "1.5rem",
-                lineHeight: "1.7",
-                fontSize: "1.05rem",
-              }}
-            >
+            <p className={styles.contentParagraph}>
               At Ayurmana, every patient is seen as a unique individual — a
               distinct combination of constitution, lifestyle, and healing
               potential. Our team of qualified Ayurvedic physicians and
@@ -178,13 +94,7 @@ export default function AboutUs() {
               individually crafted, classically grounded, and designed to
               deliver results that endure long after your treatment concludes.
             </p>
-            <p
-              style={{
-                marginBottom: "1.5rem",
-                lineHeight: "1.7",
-                fontSize: "1.05rem",
-              }}
-            >
+            <p className={styles.contentParagraph}>
               We believe that true healthcare is not reactive — it is
               preventive, restorative, and deeply personal. It is not enough to
               treat what is visible. Genuine healing demands addressing what
@@ -197,155 +107,57 @@ export default function AboutUs() {
           </AnimateOnScroll>
 
           <AnimateOnScroll direction="up" delay={0.3}>
-            <h2
-              style={{
-                color: "var(--color-primary-dark)",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Our Diagnostic Method
-            </h2>
-            <h3
-              style={{
-                color: "var(--color-primary-dark)",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Ancient Diagnostic Intelligence. Unmatched Clinical Clarity.
-            </h3>
-            <p style={{ marginBottom: "1.5rem", lineHeight: "1.7" }}>
-              True Ayurvedic treatment begins long before the first therapy is
-              administered — it begins with understanding the patient
-              completely. At Ayurmana, our diagnostic process follows the
-              classical Trividha Pariksha framework — Darshanam (observation),
-              Sparshanam (palpation), and Prashnam (interrogation) —
-              systematically supported by Ashta Sthana Pariksha, an eight-fold
-              clinical examination incorporating the precise and insightful
-              practice of Nadi Pariksha (pulse assessment).
-            </p>
-            <p style={{ marginBottom: "1.5rem", lineHeight: "1.7" }}>
-              This comprehensive diagnostic approach ensures we identify your
-              unique Prakriti and existing Vikriti with accuracy — forming the
-              essential foundation upon which every personalised, effective, and
-              lasting treatment plan at Ayurmana is built.
-            </p>
+            <div className={styles.diagnosticSection}>
+              <h2>Our Diagnostic Method</h2>
+              <h3>Ancient Diagnostic Intelligence. Unmatched Clinical Clarity.</h3>
+              <p>
+                True Ayurvedic treatment begins long before the first therapy is
+                administered — it begins with understanding the patient
+                completely. At Ayurmana, our diagnostic process follows the
+                classical Trividha Pariksha framework — Darshanam (observation),
+                Sparshanam (palpation), and Prashnam (interrogation) —
+                systematically supported by Ashta Sthana Pariksha, an eight-fold
+                clinical examination incorporating the precise and insightful
+                practice of Nadi Pariksha (pulse assessment).
+              </p>
+              <p>
+                This comprehensive diagnostic approach ensures we identify your
+                unique Prakriti and existing Vikriti with accuracy — forming the
+                essential foundation upon which every personalised, effective, and
+                lasting treatment plan at Ayurmana is built.
+              </p>
+            </div>
           </AnimateOnScroll>
 
           {/* Enhanced Why Choose Us Section */}
           <AnimateOnScroll direction="up" delay={0.2}>
-            <div
-              style={{
-                background: "linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)",
-                border: "1px solid var(--color-border)",
-                borderRadius: "20px",
-                padding: "clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem)",
-                margin: "4rem 0",
-                boxShadow: "0 10px 40px rgba(0, 0, 0, 0.05)",
-              }}
-            >
-              <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-                <span
-                  style={{
-                    display: "inline-block",
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    letterSpacing: "2px",
-                    color: "var(--color-primary)",
-                    textTransform: "uppercase",
-                    marginBottom: "1rem",
-                  }}
-                >
+            <div className={styles.whyChooseSection}>
+              <div className={styles.whyChooseHeader}>
+                <span className={styles.whyChooseLabel}>
                   Why Choose Us
                 </span>
-                <h2
-                  style={{
-                    color: "var(--color-primary-dark)",
-                    fontFamily: "var(--font-heading)",
-                    fontSize: "2rem",
-                    marginBottom: "0.5rem",
-                  }}
-                >
+                <h2 className={styles.whyChooseTitle}>
                   What Makes Ayurmana Different
                 </h2>
-                <p
-                  style={{
-                    color: "var(--color-text-muted)",
-                    maxWidth: "500px",
-                    margin: "0 auto",
-                  }}
-                >
+                <p className={styles.whyChooseDescription}>
                   Excellence in every aspect of your healing journey
                 </p>
               </div>
 
               {/* Dynamic rendering from whyChooseUs array */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                  gap: "2rem",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className={styles.cardsGrid}>
                 {whyChooseUs.map((item, index) => (
                   <div
                     key={index}
-                    style={{
-                      background: "white",
-                      padding: "1.8rem",
-                      borderRadius: "16px",
-                      textAlign: "center",
-                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                      cursor: "pointer",
-                      boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)",
-                      border: "1px solid rgba(0, 0, 0, 0.05)",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "translateY(-5px)";
-                      e.currentTarget.style.boxShadow =
-                        "0 15px 30px rgba(0, 0, 0, 0.1)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow =
-                        "0 2px 10px rgba(0, 0, 0, 0.05)";
-                    }}
+                    className={styles.card}
                   >
-                    <div
-                      style={{
-                        fontSize: "3rem",
-                        marginBottom: "1rem",
-                        background:
-                          "linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%)",
-                        width: "70px",
-                        height: "70px",
-                        borderRadius: "50%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginBottom: "1.5rem",
-                      }}
-                    >
-                      <span style={{ fontSize: "2rem" }}>{item.icon}</span>
+                    <div className={styles.cardIcon}>
+                      <span>{item.icon}</span>
                     </div>
-                    <h3
-                      style={{
-                        color: "var(--color-primary-dark)",
-                        marginBottom: "1rem",
-                        fontSize: "1.3rem",
-                        fontWeight: 600,
-                      }}
-                    >
+                    <h3 className={styles.cardTitle}>
                       {item.title}
                     </h3>
-                    <p
-                      style={{
-                        color: "var(--color-text-muted)",
-                        lineHeight: "1.6",
-                        fontSize: "0.95rem",
-                        margin: 0,
-                      }}
-                    >
+                    <p className={styles.cardDescription}>
                       {item.description}
                     </p>
                   </div>

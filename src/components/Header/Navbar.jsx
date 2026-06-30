@@ -261,26 +261,11 @@ export default function Navbar() {
                       item.label === "Treatments"
                         ? styles.dropdownRightAligned
                         : ""
-                    }`}
-                    style={
+                    } ${
                       item.label === "Wellness" || item.label === "Treatments"
-                        ? {
-                            width:
-                              item.label === "Treatments"
-                                ? "min(980px, calc(100vw - 2rem))"
-                                : "500px",
-                            maxWidth:
-                              item.label === "Treatments"
-                                ? "calc(100vw - 2rem)"
-                                : "none",
-                            display: "grid",
-                            gridTemplateColumns: "1fr 1fr",
-                            gap: "0.5rem",
-                            padding: "1rem",
-                            alignItems: "start",
-                          }
-                        : {}
-                    }
+                        ? styles.dropdownWide
+                        : ""
+                    }`}
                   >
                     {item.label === "Wellness" ? (
                       <>
