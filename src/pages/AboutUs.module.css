@@ -1,0 +1,243 @@
+/* Hero Section with Banner */
+.heroSection {
+  position: relative;
+  min-height: 60vh;
+  padding: clamp(5rem, 18vw, 8rem) 0 clamp(3rem, 10vw, 4rem);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.heroBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 35, 0.85) 0%, rgba(0, 102, 68, 0.85) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.95rem, 6vw, 2.5rem);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroTitleLast {
+  font-family: var(--font-heading);
+  color: white;
+  margin-bottom: 1rem;
+  font-size: clamp(1.95rem, 6vw, 2.5rem);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  color: #FFD700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Section */
+.contentSection {
+  background-color: var(--color-bg-white);
+}
+
+.contentContainer {
+  max-width: 800px;
+}
+
+.contentParagraph {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.diagnosticSection h2 {
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.diagnosticSection h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.diagnosticSection p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Why Choose Us Section */
+.whyChooseSection {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
+  margin: 4rem 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.whyChooseHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.whyChooseLabel {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.whyChooseTitle {
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.whyChooseDescription {
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Individual Card */
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.cardIcon span {
+  font-size: 2rem;
+}
+
+.cardTitle {
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cardDescription {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Responsive: Tablet (980px) */
+@media (max-width: 980px) {
+  .heroSection {
+    min-height: 50vh;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive: Mobile (768px) */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 45vh;
+    padding: clamp(4rem, 15vw, 6rem) 0 clamp(2rem, 8vw, 3rem);
+  }
+
+  .contentParagraph {
+    font-size: 1rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardIcon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Responsive: Small Mobile (480px) */
+@media (max-width: 480px) {
+  .heroSection {
+    min-height: 40vh;
+  }
+
+  .whyChooseSection {
+    margin: 2.5rem 0;
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 2vw, 1.25rem);
+  }
+
+  .cardsGrid {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}

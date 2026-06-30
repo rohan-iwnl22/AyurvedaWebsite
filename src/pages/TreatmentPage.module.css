@@ -1,0 +1,261 @@
+.page {
+  background:
+    radial-gradient(circle at top left, rgba(197, 165, 90, 0.08), transparent 24%),
+    linear-gradient(180deg, #f8f5ee 0%, #fffdf9 28%, #ffffff 100%);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 0 4.5rem;
+  background:
+    linear-gradient(135deg, rgba(21, 61, 43, 0.98), rgba(34, 82, 58, 0.92)),
+    url("https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/diet.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.14), transparent 22%),
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.1), transparent 18%),
+    linear-gradient(180deg, rgba(8, 28, 21, 0.2), rgba(8, 28, 21, 0.45));
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.heroSubtitle {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.contentSection {
+  background-color: var(--color-bg-white);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.textColumn {
+  min-width: 0;
+}
+
+.sectionTitle {
+  color: var(--color-primary-dark);
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.overviewText {
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.bodyText {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.benefitsList {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  padding: 0;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.benefitIcon {
+  color: var(--color-accent);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.indicationsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.indicationTag {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.sideCard {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  background-color: var(--color-bg-light);
+}
+
+.imageFrame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fffdf8, #f4ede0);
+}
+
+.imageFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.productDetails {
+  padding: 2rem;
+}
+
+.detailSection {
+  margin-bottom: 1.25rem;
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.directionsList,
+.precautionsList {
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+}
+
+.enquireButton {
+  width: 100%;
+}
+
+.notFound {
+  padding: 120px 0;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    padding: 5.5rem 0 3.5rem;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 4.75rem 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .heroSubtitle {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .overviewText {
+    font-size: 1rem;
+  }
+
+  .productDetails {
+    padding: 1.25rem;
+  }
+
+  .imageFrame {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+@media (max-width: 480px) {
+  .backLink {
+    font-size: 0.82rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero {
+    padding-top: 4.25rem;
+  }
+
+  .heroInner {
+    max-width: 100%;
+  }
+
+  .benefitItem {
+    font-size: 0.92rem;
+  }
+
+  .indicationTag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .productDetails {
+    padding: 1rem;
+  }
+}
