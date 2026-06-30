@@ -6,7 +6,7 @@ export default function FooterSection() {
     {
       name: "AYURMANA AYURVEDIC CLINIC",
       address:
-        "Shop No:2, Mangal murti Residency, MHADA colony road, behind durga Lawns, kaulkhed, Akola",
+        "Shop No:2, Mangalmurti Residency, MHADA colony road, behind Durga Lawns, Kaulkhed, Akola",
       phone: "+91 93707 71021 || +91 89762 97579",
       email: "ayurmanayurved@gmail.com",
     },
