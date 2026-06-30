@@ -296,8 +296,9 @@ export default function NutritionPage() {
           <FaSpa className={`${styles.ctaFloat} ${styles.ctaFloat4}`} />
         </div>
 
+        <div className="container">
         <motion.div
-          className={`${styles.ctaCard} container`}
+          className={styles.ctaCard}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -343,7 +344,8 @@ export default function NutritionPage() {
               <FaArrowRight className={styles.ctaBtnArrow} />
             </Link>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
     </main>
   );
