@@ -96,6 +96,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: transform var(--transition-slow);
 }
 
@@ -148,5 +149,23 @@
   .goldOffsetCard {
     left: -10px;
     bottom: -10px;
+  }
+
+  .imageFrame {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-width: 6px;
+  }
+
+  .imageFrame img {
+    object-fit: contain;
+    background: linear-gradient(180deg, #fffdf8, #f4ede0);
+  }
+
+  .leafDecoration {
+    width: 88px;
+    height: 88px;
+    top: -18px;
+    right: -18px;
   }
 }

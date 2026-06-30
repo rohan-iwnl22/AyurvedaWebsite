@@ -43,7 +43,8 @@ export default function AboutUs() {
       <section
         style={{
           position: "relative",
-          height: "75vh",
+          minHeight: "60vh",
+          padding: "clamp(5rem, 18vw, 8rem) 0 clamp(3rem, 10vw, 4rem)",
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
@@ -95,7 +96,7 @@ export default function AboutUs() {
               fontFamily: "var(--font-heading)",
               color: "white",
               marginBottom: "0.5rem",
-              fontSize: "2.5rem",
+              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
@@ -107,7 +108,7 @@ export default function AboutUs() {
               fontFamily: "var(--font-heading)",
               color: "white",
               marginBottom: "1rem",
-              fontSize: "2.5rem",
+              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
@@ -118,7 +119,7 @@ export default function AboutUs() {
               fontFamily: "var(--font-heading)",
               color: "white",
               marginBottom: "1rem",
-              fontSize: "2.5rem",
+              fontSize: "clamp(1.95rem, 6vw, 2.5rem)",
               textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
@@ -237,7 +238,7 @@ export default function AboutUs() {
                 background: "linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)",
                 border: "1px solid var(--color-border)",
                 borderRadius: "20px",
-                padding: "3rem 2rem",
+                padding: "clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem)",
                 margin: "4rem 0",
                 boxShadow: "0 10px 40px rgba(0, 0, 0, 0.05)",
               }}
@@ -281,7 +282,7 @@ export default function AboutUs() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                   gap: "2rem",
                   marginBottom: "2rem",
                 }}

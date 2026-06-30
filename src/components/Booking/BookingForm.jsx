@@ -297,7 +297,7 @@ export default function BookingForm() {
                       <option value="">-- Select Branch --</option>
                       {BRANCHES.map((b) => (
                         <option key={b.id} value={b.id}>
-                          {b.name} Branch
+                          {b.name}
                         </option>
                       ))}
                     </select>

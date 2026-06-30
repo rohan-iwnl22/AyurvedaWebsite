@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { FaCheckCircle, FaArrowLeft } from "react-icons/fa";
 import AnimateOnScroll from "../components/AnimateOnScroll";
+import styles from "./TreatmentPage.module.css";
 
 const TREATMENT_DB = {
   snehana: {
@@ -1081,8 +1082,7 @@ export default function TreatmentPage() {
   if (!treatment) {
     return (
       <div
-        className="container"
-        style={{ padding: "120px 0", textAlign: "center" }}
+        className={`container ${styles.notFound}`}
       >
         <h2>Treatment Not Found</h2>
         <p>
@@ -1101,159 +1101,64 @@ export default function TreatmentPage() {
   }
 
   return (
-    <div className="treatment-detail-page">
+    <div className={styles.page}>
       {/* Top Banner */}
-      <section
-        style={{
-          background:
-            "linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%)",
-          color: "white",
-          padding: "100px 0 60px 0",
-        }}
-      >
-        <div className="container">
+      <section className={styles.hero}>
+        <div className={`container ${styles.heroInner}`}>
           <Link
             to="/"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              color: "var(--color-accent)",
-              fontSize: "0.9rem",
-              fontWeight: 600,
-              marginBottom: "1.5rem",
-            }}
+            className={styles.backLink}
           >
             <FaArrowLeft size={12} />
             Back to Treatments
           </Link>
-          <h1
-            style={{
-              fontFamily: "var(--font-heading)",
-              color: "white",
-              marginBottom: "0.5rem",
-            }}
-          >
+          <h1 className={styles.heroTitle}>
             {treatment.title}
           </h1>
-          <p
-            style={{
-              color: "var(--color-accent)",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              fontWeight: 600,
-            }}
-          >
+          <p className={styles.heroSubtitle}>
             {treatment.subtitle}
           </p>
         </div>
       </section>
 
       {/* Main Content Layout */}
-      <section
-        className="section"
-        style={{ backgroundColor: "var(--color-bg-white)" }}
-      >
+      <section className={`section ${styles.contentSection}`}>
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.1fr 0.9fr",
-              gap: "4rem",
-              alignItems: "flex-start",
-            }}
-          >
+          <div className={styles.contentGrid}>
             {/* Left text column */}
             <AnimateOnScroll direction="right">
-              <div>
-                <h3
-                  style={{
-                    color: "var(--color-primary-dark)",
-                    marginBottom: "1rem",
-                    borderBottom: "2px solid var(--color-accent)",
-                    paddingBottom: "0.5rem",
-                    display: "inline-block",
-                  }}
-                >
+              <div className={styles.textColumn}>
+                <h3 className={styles.sectionTitle}>
                   Overview
                 </h3>
-                <p
-                  style={{
-                    fontSize: "1.1rem",
-                    color: "var(--color-text-dark)",
-                    fontWeight: 500,
-                    lineHeight: "1.6",
-                    marginBottom: "1rem",
-                  }}
-                >
+                <p className={styles.overviewText}>
                   {treatment.intro}
                 </p>
-                <p style={{ marginBottom: "2rem", lineHeight: "1.7" }}>
+                <p className={styles.bodyText}>
                   {treatment.description}
                 </p>
 
-                <h3
-                  style={{
-                    color: "var(--color-primary-dark)",
-                    marginBottom: "1.25rem",
-                  }}
-                >
+                <h3 className={styles.sectionTitle}>
                   Key Benefits
                 </h3>
-                <ul style={{ listStyle: "none", marginBottom: "2.5rem" }}>
+                <ul className={styles.benefitsList}>
                   {treatment.benefits.map((benefit, idx) => (
                     <li
                       key={idx}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: "0.75rem",
-                        marginBottom: "0.8rem",
-                        fontSize: "0.95rem",
-                      }}
+                      className={styles.benefitItem}
                     >
-                      <FaCheckCircle
-                        style={{
-                          color: "var(--color-accent)",
-                          marginTop: "0.2rem",
-                          flexShrink: 0,
-                        }}
-                        size={16}
-                      />
+                      <FaCheckCircle className={styles.benefitIcon} size={16} />
                       <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>
 
-                <h3
-                  style={{
-                    color: "var(--color-primary-dark)",
-                    marginBottom: "1rem",
-                  }}
-                >
+                <h3 className={styles.sectionTitle}>
                   Indications
                 </h3>
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "0.5rem",
-                    marginBottom: "2rem",
-                  }}
-                >
+                <div className={styles.indicationsWrapper}>
                   {treatment.indications.map((ind, idx) => (
-                    <span
-                      key={idx}
-                      style={{
-                        padding: "0.4rem 1rem",
-                        borderRadius: "20px",
-                        backgroundColor: "var(--color-bg-light)",
-                        border: "1px solid var(--color-border)",
-                        fontSize: "0.85rem",
-                        fontWeight: 600,
-                        color: "var(--color-primary-dark)",
-                      }}
-                    >
+                    <span key={idx} className={styles.indicationTag}>
                       {ind}
                     </span>
                   ))}
@@ -1263,70 +1168,36 @@ export default function TreatmentPage() {
 
             {/* Right details column */}
             <AnimateOnScroll direction="left">
-              <div
-                style={{
-                  border: "1px solid var(--color-border)",
-                  borderRadius: "12px",
-                  overflow: "hidden",
-                  boxShadow: "var(--shadow-premium)",
-                  backgroundColor: "var(--color-bg-light)",
-                }}
-              >
-                <img
-                  src={treatment.image}
-                  alt={treatment.title}
-                  style={{ width: "100%", height: "240px", objectFit: "cover" }}
-                />
+              <div className={styles.sideCard}>
+                <div className={styles.imageFrame}>
+                  <img
+                    src={treatment.image}
+                    alt={treatment.title}
+                  />
+                </div>
 
-                <div style={{ padding: "2rem" }}>
-                  <div style={{ marginBottom: "1.25rem" }}>
-                    <span
-                      style={{
-                        fontSize: "0.8rem",
-                        textTransform: "uppercase",
-                        color: "var(--color-text-muted)",
-                        fontWeight: 600,
-                      }}
-                    >
+                <div className={styles.productDetails}>
+                  <div className={styles.detailSection}>
+                    <span className={styles.detailLabel}>
                       Session Duration
                     </span>
-                    <p
-                      style={{
-                        fontSize: "1.25rem",
-                        fontWeight: 700,
-                        color: "var(--color-primary-dark)",
-                      }}
-                    >
+                    <p className={styles.detailValue} style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--color-primary-dark)" }}>
                       {treatment.duration}
                     </p>
                   </div>
 
-                  <div style={{ marginBottom: "2rem" }}>
-                    <span
-                      style={{
-                        fontSize: "0.8rem",
-                        textTransform: "uppercase",
-                        color: "var(--color-text-muted)",
-                        fontWeight: 600,
-                      }}
-                    >
+                  <div className={styles.detailSection}>
+                    <span className={styles.detailLabel}>
                       Recommended Course
                     </span>
-                    <p
-                      style={{
-                        fontSize: "1rem",
-                        color: "var(--color-text-dark)",
-                        lineHeight: "1.5",
-                      }}
-                    >
+                    <p className={styles.detailValue} style={{ fontSize: "1rem", color: "var(--color-text-dark)", lineHeight: "1.5" }}>
                       {treatment.recommendation}
                     </p>
                   </div>
 
                   <Link
                     to="#"
-                    className="btn btn-primary"
-                    style={{ width: "100%" }}
+                    className={`btn btn-primary ${styles.enquireButton}`}
                   >
                     Book Appointment Now
                   </Link>
