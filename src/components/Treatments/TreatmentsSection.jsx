@@ -111,7 +111,7 @@ export default function TreatmentsSection() {
     },
     {
       image:
-        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhi%20karmaa.jpg",
+        "https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/vidhikarma.png",
       title: "Viddha Karma",
       description:
         "A classical Ayurvedic needling procedure that releases blocked energy, eliminates localised toxins, and restores Vata flow — indicated for chronic pain, nerve disorders, and musculoskeletal conditions.",
