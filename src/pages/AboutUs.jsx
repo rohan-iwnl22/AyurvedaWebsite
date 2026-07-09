@@ -167,6 +167,7 @@ export default function AboutUs() {
           </AnimateOnScroll>
         </div>
       </section>
+      {/* HELLO */}
     </div>
   );
 }
