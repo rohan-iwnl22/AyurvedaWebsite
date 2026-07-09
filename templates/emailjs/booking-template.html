@@ -1,0 +1,99 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation – Ayurmana</title>
+  </head>
+  <body style="margin:0; padding:0; background:#f4f3f0; font-family: Arial, Helvetica, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f3f0; padding:20px 0;">
+      <tr>
+        <td align="center" style="padding:0 15px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; background:#ffffff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.04); overflow:hidden;">
+            <tr>
+              <td style="padding:30px 30px 20px;">
+                <!-- Logo -->
+                <div style="text-align:center; margin-bottom:24px;">
+                  <img src="https://ik.imagekit.io/umm5llpkg/Ayurmana%20Clinic/logo.png?updatedAt=1780915946116" alt="Ayurmana Clinic" style="max-width:140px; width:100%; height:auto; display:inline-block; border-radius:6px;">
+                </div>
+
+                <!-- Header -->
+                <h2 style="color:#1e2a3a; font-weight:600; font-size:22px; border-bottom:3px solid #0066cc; padding-bottom:12px; margin:0 0 24px 0; text-align:center; letter-spacing:-0.2px;">
+                  Booking Confirmation
+                </h2>
+
+                <!-- Patient Information -->
+                <div style="margin-bottom:24px;">
+                  <h3 style="color:#0066cc; font-size:16px; font-weight:600; margin:0 0 12px 0; letter-spacing:0.3px;">
+                    <span style="display:inline-block; width:4px; height:16px; background:#0066cc; border-radius:4px; margin-right:10px; vertical-align:middle;"></span>
+                    Patient Information
+                  </h3>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-size:15px; color:#1e2a3a;">
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Full Name</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{patient_name}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Email</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5;">
+                        <a href="mailto:{{patient_email}}" style="color:#0066cc; text-decoration:none; font-weight:500;">{{patient_email}}</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Phone</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{patient_phone}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Appointment Details -->
+                <div style="margin-bottom:24px;">
+                  <h3 style="color:#0066cc; font-size:16px; font-weight:600; margin:0 0 12px 0; letter-spacing:0.3px;">
+                    <span style="display:inline-block; width:4px; height:16px; background:#0066cc; border-radius:4px; margin-right:10px; vertical-align:middle;"></span>
+                    Appointment Details
+                  </h3>
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; font-size:15px; color:#1e2a3a;">
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Doctor</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{doctor_name}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Specialization</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{doctor_spec}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Branch</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{branch}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Date</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{date}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0 8px 0; color:#4a5a6e; font-weight:600; width:130px; border-bottom:1px solid #edf0f5;">Time Slot</td>
+                      <td style="padding:10px 0 8px 12px; border-bottom:1px solid #edf0f5; color:#1e2a3a; font-weight:500;">{{time_slot}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Confirmation Badge -->
+                <div style="text-align:center; margin:24px 0;">
+                  <div style="background:#e8f5e9; color:#2e7d32; font-size:14px; font-weight:600; padding:12px 24px; border-radius:8px; display:inline-block;">
+                    Your appointment has been confirmed
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div style="margin-top:28px; padding-top:20px; border-top:1px solid #e6eaef; text-align:center; font-size:13px; color:#8b9aaa;">
+                  <p style="margin:0 0 4px 0;">This confirmation was sent from the Ayurmana booking system</p>
+                </div>
+
+              </td>
+            </tr>
+          </table>
+          <div style="height:12px;"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+  </html>

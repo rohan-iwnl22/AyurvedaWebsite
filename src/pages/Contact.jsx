@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaSpinner } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import EMAILJS_CONFIG from "../config/emailjs";
 import AnimateOnScroll from "../components/AnimateOnScroll";
 import styles from "./Contact.module.css";
 
@@ -18,11 +21,36 @@ export default function Contact() {
   const [searchParams] = useSearchParams();
   const branchParam = searchParams.get("branch");
   const highlightedBranch = BRANCH_DETAILS[branchParam] || null;
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
+  const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you for reaching out! Our team will contact you shortly.");
-    e.target.reset();
+    const form = e.target;
+    const data = new FormData(form);
+
+    setSending(true);
+    setSendError("");
+    try {
+      await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.contactTemplateId,
+        {
+          from_name: data.get("c_name"),
+          from_email: data.get("c_email"),
+          phone: data.get("c_phone"),
+          branch: data.get("c_branch") ? data.get("c_branch").charAt(0).toUpperCase() + data.get("c_branch").slice(1) : "General Inquiry",
+          message: data.get("c_message"),
+        }
+      );
+      setSent(true);
+      form.reset();
+    } catch (err) {
+      setSendError("Failed to send message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -94,6 +122,7 @@ export default function Contact() {
                       <label htmlFor="c_name">Your Name</label>
                       <input
                         id="c_name"
+                        name="c_name"
                         type="text"
                         required
                         placeholder="e.g. Amit Patil"
@@ -103,6 +132,7 @@ export default function Contact() {
                       <label htmlFor="c_email">Email Address</label>
                       <input
                         id="c_email"
+                        name="c_email"
                         type="email"
                         required
                         placeholder="e.g. amit@example.com"
@@ -114,6 +144,7 @@ export default function Contact() {
                     <label htmlFor="c_phone">Phone Number</label>
                     <input
                       id="c_phone"
+                      name="c_phone"
                       type="tel"
                       required
                       placeholder="e.g. 94220XXXXX"
@@ -122,7 +153,7 @@ export default function Contact() {
 
                   <div className={styles.formGroup}>
                     <label htmlFor="c_branch">Preferred Branch</label>
-                    <select id="c_branch" defaultValue={branchParam || ""}>
+                    <select id="c_branch" name="c_branch" defaultValue={branchParam || ""}>
                       <option value="">General Inquiry</option>
                       <option value="akola">Ayurmana - Ayurved Panchakarma and Nutrihealth Clinic</option>
                     </select>
@@ -132,17 +163,30 @@ export default function Contact() {
                     <label htmlFor="c_message">How can we help you?</label>
                     <textarea
                       id="c_message"
+                      name="c_message"
                       rows="5"
                       required
                       placeholder="Write your message here..."
                     ></textarea>
                   </div>
 
+                  {sendError && (
+                    <p style={{ color: "#d32f2f", fontSize: "0.9rem" }}>{sendError}</p>
+                  )}
+                  {sent && (
+                    <p style={{ color: "var(--color-primary)", fontWeight: 600, fontSize: "0.95rem" }}>
+                      Thank you for reaching out! Our team will contact you shortly.
+                    </p>
+                  )}
+
                   <button
                     type="submit"
                     className={`btn btn-primary ${styles.submitBtn}`}
+                    disabled={sending}
                   >
-                    Send Message
+                    {sending ? (
+                      <><FaSpinner style={{ animation: "spin 1s linear infinite" }} /> Sending...</>
+                    ) : "Send Message"}
                   </button>
                 </form>
               </div>

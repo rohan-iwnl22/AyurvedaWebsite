@@ -1,7 +1,9 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaSpinner } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import EMAILJS_CONFIG from "../../config/emailjs";
 import styles from "./BookingForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -35,10 +37,12 @@ const TIME_SLOTS = [
   },
 ];
 
-const BRANCHES = [{ id: "Akola", name: "Akola Branch" }];
+const BRANCHES = [{ id: "Akola", name: "Akola" }];
 
 export default function BookingForm() {
   const [step, setStep] = useState(1);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
   const [formData, setFormData] = useState({
     doctorId: "",
     date: new Date(),
@@ -52,8 +56,41 @@ export default function BookingForm() {
   const selectedDoctorObj = DOCTORS.find((doc) => doc.id === formData.doctorId);
   const selectedBranchObj = BRANCHES.find((b) => b.id === formData.branch);
 
-  const handleNext = () => {
-    if (step < 4) setStep(step + 1);
+  const handleNext = async () => {
+    if (step === 3) {
+      setSending(true);
+      setSendError("");
+      try {
+        const dateStr = formData.date.toLocaleDateString("en-IN", {
+          weekday: "short",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        });
+        await emailjs.send(
+          EMAILJS_CONFIG.serviceId,
+          EMAILJS_CONFIG.bookingTemplateId,
+          {
+            patient_name: formData.name,
+            patient_email: formData.email,
+            patient_phone: formData.phone,
+            doctor_name: selectedDoctorObj?.name || "",
+            doctor_spec: selectedDoctorObj?.spec || "",
+            branch: selectedBranchObj?.name || "",
+            date: dateStr,
+            time_slot: formData.timeSlot,
+          },
+        );
+        setStep(4);
+      } catch (err) {
+        console.log("Error: " + err);
+        setSendError("Failed to send confirmation. Please try again.");
+      } finally {
+        setSending(false);
+      }
+    } else if (step < 4) {
+      setStep(step + 1);
+    }
   };
 
   const handleBack = () => {
@@ -382,11 +419,24 @@ export default function BookingForm() {
           {/* Navigation Controls */}
           {step < 4 && (
             <div className={styles.formControls}>
+              {sendError && (
+                <p
+                  style={{
+                    color: "#d32f2f",
+                    width: "100%",
+                    textAlign: "center",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {sendError}
+                </p>
+              )}
               {step > 1 && (
                 <button
                   type="button"
                   className={styles.backBtn}
                   onClick={handleBack}
+                  disabled={sending}
                 >
                   Back
                 </button>
@@ -395,9 +445,20 @@ export default function BookingForm() {
                 type="button"
                 className={styles.nextBtn}
                 onClick={handleNext}
-                disabled={!isStepValid()}
+                disabled={!isStepValid() || sending}
               >
-                {step === 3 ? "Confirm Booking" : "Continue"}
+                {sending ? (
+                  <>
+                    <FaSpinner
+                      style={{ animation: "spin 1s linear infinite" }}
+                    />{" "}
+                    Sending...
+                  </>
+                ) : step === 3 ? (
+                  "Confirm Booking"
+                ) : (
+                  "Continue"
+                )}
               </button>
             </div>
           )}
